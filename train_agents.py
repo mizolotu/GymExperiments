@@ -20,4 +20,4 @@ if __name__ == '__main__':
     env_fns = [env_classes[0] for _ in range(n_envs)]
     train_env = SubprocVecEnv(env_fns)
     eval_env = SubprocVecEnv(env_fns)
-    learn_ddpg(env=train_env, network='lstm', total_timesteps=100000, eval_env=eval_env)
+    learn_ddpg(env=train_env, network='cnn', total_timesteps=100000, eval_env=eval_env)
