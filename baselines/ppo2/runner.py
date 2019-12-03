@@ -18,7 +18,7 @@ class Runner(AbstractEnvRunner):
         self.gamma = gamma
 
     def run(self):
-        #self.obs = self.env.reset()
+        self.obs = self.env.reset()
         # Here, we init the lists that will contain the mb of experiences
         mb_obs, mb_rewards, mb_actions, mb_values, mb_dones, mb_neglogpacs = [],[],[],[],[],[]
         mb_states = self.states
