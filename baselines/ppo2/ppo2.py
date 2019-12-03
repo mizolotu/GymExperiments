@@ -115,7 +115,7 @@ def learn(*, network, env, total_timesteps, eval_env = None, seed=None, nsteps=2
     if eval_env is not None:
         eval_runner = Runner(env = eval_env, model = model, nsteps = nsteps, gamma = gamma, lam= lam)
 
-    epinfobuf = deque(maxlen=100)
+    epinfobuf = deque(maxlen=100*nsteps)
     if eval_env is not None:
         eval_epinfobuf = deque(maxlen=100)
 
