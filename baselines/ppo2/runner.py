@@ -17,17 +17,24 @@ class Runner(AbstractEnvRunner):
         # Discount rate
         self.gamma = gamma
 
-    def run(self):
+    def run(self, eval=False, render=False):
         self.obs = self.env.reset()
         # Here, we init the lists that will contain the mb of experiences
         mb_obs, mb_rewards, mb_actions, mb_values, mb_dones, mb_neglogpacs = [],[],[],[],[],[]
         mb_states = self.states
         epinfos = []
         # For n in range number of steps
+        scores = [[] for _ in range(self.env.num_envs)]
+        steps = [0 for _ in range(self.env.num_envs)]
         for _ in range(self.nsteps):
             # Given observations, get action value and neglopacs
             # We already have self.obs because Runner superclass run self.obs[:] = env.reset() on init
-            actions, values, self.states, neglogpacs = self.model.step(self.obs, S=self.states, M=self.dones)
+            if eval:
+                actions, values, self.states, neglogpacs = self.model.eval_step(self.obs, S=self.states, M=self.dones)
+                if render:
+                    self.env.render()
+            else:
+                actions, values, self.states, neglogpacs = self.model.step(self.obs, S=self.states, M=self.dones)
             mb_obs.append(self.obs.copy())
             mb_actions.append(actions)
             mb_values.append(values)
@@ -37,10 +44,14 @@ class Runner(AbstractEnvRunner):
             # Take actions in env and look the results
             # Infos contains a ton of useful informations
             self.obs[:], rewards, self.dones, infos = self.env.step(actions)
-            for info in infos:
-                maybeepinfo = info
-                if maybeepinfo: epinfos.append(maybeepinfo)
+            for i in range(len(infos)):
+                if 'r' in infos[i].keys():
+                    scores[i].append(infos[i]['r'])
+                if 'l' in infos[i].keys() and infos[i]['l'] > steps[i]:
+                    steps[i] = infos[i]['l']
             mb_rewards.append(rewards)
+        for i in range(self.env.num_envs):
+            epinfos.append({'r': np.mean(scores[i]), 'l': steps[i]})
         #batch of steps to batch of rollouts
         mb_obs = np.asarray(mb_obs, dtype=self.obs.dtype)
         mb_rewards = np.asarray(mb_rewards, dtype=np.float32)

@@ -52,7 +52,7 @@ class PendulumEnv(gym.Env):
         return self._get_obs(), r, False, {'r': r, 'l': self.step_count}
 
     def reset(self):
-        self.step_count = 1
+        self.step_count = 0
         high = np.array([np.pi, 1])
         self.state = self.np_random.uniform(low=-high, high=high)
         self.last_u = None

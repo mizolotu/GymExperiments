@@ -440,4 +440,4 @@ def launch_tensorboard_in_background(log_dir):
         t.start()
     '''
     import subprocess
-    subprocess.Popen(['tensorboard', '--logdir', log_dir])
+    subprocess.Popen(['tensorboard', '--logdir', log_dir],stderr=subprocess.DEVNULL, stdout=subprocess.DEVNULL)
