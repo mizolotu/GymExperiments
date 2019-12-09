@@ -64,8 +64,9 @@ if __name__ == '__main__':
 
     n_envs = 16
     n_steps = 125
-    n_episodes = 200000
+    n_episodes = 500000
     total_timesteps = n_episodes * n_steps * n_envs
+    print('Total time steps: {0}'.format(total_timesteps))
 
     test_alg_on_env(env_classes[0], algorithms[0], networks[0], ne=n_envs, ns=n_steps, tt=total_timesteps)
 
