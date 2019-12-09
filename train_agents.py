@@ -35,7 +35,7 @@ def test_alg_on_env(env_class, algorithm, network, ne, ns, tt, ld='log'):
     format_strs = os.getenv('', 'stdout,log,csv,tensorboard').split(',')
     logger.configure(os.path.abspath(logdir), format_strs)
     launch_tensorboard_in_background(tb_dir)
-    algorithm['learn'](env=train_envs, network=network, nsteps=ns, total_timesteps=tt, eval_env=eval_envs)
+    algorithm['learn'](env=train_envs, network=network, nsteps=ns, total_timesteps=tt)
 
 if __name__ == '__main__':
 
@@ -62,7 +62,7 @@ if __name__ == '__main__':
         'attention-cnn'
     ]
 
-    n_envs = 4
+    n_envs = 16
     n_steps = 125
     n_episodes = 200000
     total_timesteps = n_episodes * n_steps * n_envs
