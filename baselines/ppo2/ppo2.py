@@ -17,7 +17,8 @@ def constfn(val):
         return val
     return f
 
-def learn(network, env, total_timesteps, eval_env,
+def learn(network, env, total_timesteps,
+    eval_env=None,
     seed=None,
     nsteps=2000,
     ent_coef=0.0,
