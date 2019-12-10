@@ -1,5 +1,6 @@
 import os, shutil
 import os.path as osp
+from datetime import datetime
 
 from baselines.common.vec_env import SubprocVecEnv
 from baselines.ppo2.ppo2 import learn as learn_ppo
@@ -34,8 +35,10 @@ def test_alg_on_env(env_class, algorithm, network, ne, ns, tt, ld='log'):
     if osp.isdir(logdir): clean_dir(tb_dir)
     format_strs = os.getenv('', 'stdout,log,csv,tensorboard').split(',')
     logger.configure(os.path.abspath(logdir), format_strs)
+    now = datetime.now()
+    tag = now.strftime('%m/%d/%Y_%H:%M:%S')
     launch_tensorboard_in_background(tb_dir)
-    algorithm['learn'](env=train_envs, network=network, nsteps=ns, total_timesteps=tt)
+    algorithm['learn'](env=train_envs, network=network, nsteps=ns, total_timesteps=tt, log_interval=int(tt/(ne*ns*100)))
 
 if __name__ == '__main__':
 
@@ -64,7 +67,7 @@ if __name__ == '__main__':
 
     n_envs = 16
     n_steps = 125
-    n_episodes = 500000
+    n_episodes = 5000
     total_timesteps = n_episodes * n_steps * n_envs
     print('Total time steps: {0}'.format(total_timesteps))
 
