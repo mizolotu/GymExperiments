@@ -118,7 +118,6 @@ def learn(network, env, total_timesteps,
     if model_fn is None:
         from baselines.ppo2.model import Model
         model_fn = Model
-
     model = model_fn(policy=policy, ob_space=ob_space, ac_space=ac_space, nbatch_act=nenvs, nbatch_train=nbatch_train,
                     nsteps=nsteps, ent_coef=ent_coef, vf_coef=vf_coef,
                     max_grad_norm=max_grad_norm, comm=comm, mpi_rank_weight=mpi_rank_weight)
@@ -193,6 +192,7 @@ def learn(network, env, total_timesteps,
                     mbflatinds = flatinds[mbenvinds].ravel()
                     slices = (arr[mbflatinds] for arr in (obs, returns, masks, actions, values, neglogpacs))
                     mbstates = states[mbenvinds]
+                    print(states.shape, mbstates.shape)
                     mblossvals.append(model.train(lrnow, cliprangenow, *slices, mbstates))
 
         # Feedforward --> get losses --> update
