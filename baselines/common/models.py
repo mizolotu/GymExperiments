@@ -1,7 +1,7 @@
 import numpy as np
 import tensorflow as tf
 from baselines.a2c import utils
-from baselines.a2c.utils import conv, fc, conv_to_fc, batch_to_seq, seq_to_batch
+from baselines.a2c.utils import conv, fc, conv_to_fc, batch_to_seq, seq_to_batch, ortho_init
 from baselines.common.mpi_running_mean_std import RunningMeanStd
 
 mapping = {}
@@ -102,6 +102,88 @@ def mlp(num_layers=2, num_hidden=64, activation=tf.tanh, layer_norm=False):
 
     return network_fn
 
+@register("mlp2_64")
+def mlp2_64(num_layers=2, num_hidden=64, activation=tf.tanh, layer_norm=False):
+    def network_fn(X):
+        h = tf.layers.flatten(X)
+        for i in range(num_layers):
+            #h = fc(h, 'mlp_fc{}'.format(i), nh=num_hidden, init_scale=np.sqrt(2))
+            h = tf.keras.layers.Dense(num_hidden)(h)
+            if layer_norm:
+                h = tf.contrib.layers.layer_norm(h, center=True, scale=True)
+            h = activation(h)
+        return h
+    return network_fn
+
+@register("mlp2_256")
+def mlp2_256(num_layers=2, num_hidden=256, activation=tf.tanh, layer_norm=False):
+    def network_fn(X):
+        h = tf.layers.flatten(X)
+        for i in range(num_layers):
+            h = fc(h, 'mlp_fc{}'.format(i), nh=num_hidden, init_scale=np.sqrt(2))
+            if layer_norm:
+                h = tf.contrib.layers.layer_norm(h, center=True, scale=True)
+            h = activation(h)
+        return h
+    return network_fn
+
+@register("mlp2_1024")
+def mlp2_1024(num_layers=2, num_hidden=1024, activation=tf.tanh, layer_norm=False):
+    def network_fn(X):
+        h = tf.layers.flatten(X)
+        for i in range(num_layers):
+            h = fc(h, 'mlp_fc{}'.format(i), nh=num_hidden, init_scale=np.sqrt(2))
+            if layer_norm:
+                h = tf.contrib.layers.layer_norm(h, center=True, scale=True)
+            h = activation(h)
+        return h
+    return network_fn
+
+@register("mlp3_64")
+def mlp3_64(num_layers=3, num_hidden=64, activation=tf.tanh, layer_norm=False):
+    def network_fn(X):
+        h = tf.layers.flatten(X)
+        for i in range(num_layers):
+            h = fc(h, 'mlp_fc{}'.format(i), nh=num_hidden, init_scale=np.sqrt(2))
+            if layer_norm:
+                h = tf.contrib.layers.layer_norm(h, center=True, scale=True)
+            h = activation(h)
+        return h
+    return network_fn
+
+@register("mlp3_64")
+def mlp3_64(num_layers=3, num_hidden=256, activation=tf.tanh, layer_norm=False):
+    def network_fn(X):
+        h = tf.layers.flatten(X)
+        for i in range(num_layers):
+            h = fc(h, 'mlp_fc{}'.format(i), nh=num_hidden, init_scale=np.sqrt(2))
+            if layer_norm:
+                h = tf.contrib.layers.layer_norm(h, center=True, scale=True)
+            h = activation(h)
+        return h
+    return network_fn
+
+@register("mlp3_1024")
+def mlp3_1024(num_layers=2, num_hidden=1024, activation=tf.tanh, layer_norm=False):
+    def network_fn(X):
+        h = tf.layers.flatten(X)
+        for i in range(num_layers):
+            h = fc(h, 'mlp_fc{}'.format(i), nh=num_hidden, init_scale=np.sqrt(2))
+            if layer_norm:
+                h = tf.contrib.layers.layer_norm(h, center=True, scale=True)
+            h = activation(h)
+        return h
+    return network_fn
+
+@register("cnn_mlp_64")
+def cnn_mlp_64(num_hidden=64, activation=tf.tanh, layer_norm=False):
+    def network_fn(X):
+        conv = tf.keras.layers.Conv1D(filters=num_hidden, kernel_size=4, activation='relu')(X)
+        h = tf.layers.flatten(conv)
+        h = fc(h, 'mlp_fc0', nh=num_hidden, init_scale=np.sqrt(2))
+        h = activation(h)
+        return h
+    return network_fn
 
 @register("cnn")
 def cnn(**conv_kwargs):

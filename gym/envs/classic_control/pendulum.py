@@ -3,6 +3,7 @@ from gym import spaces
 from gym.utils import seeding
 import numpy as np
 from os import path
+from collections import deque
 
 class PendulumEnv(gym.Env):
     metadata = {
@@ -10,7 +11,7 @@ class PendulumEnv(gym.Env):
         'video.frames_per_second' : 30
     }
 
-    def __init__(self, g=10.0):
+    def __init__(self, g=10.0, stack=None):
         self.step_count = 0
         self.max_speed=8
         self.max_torque=2.
@@ -19,10 +20,17 @@ class PendulumEnv(gym.Env):
         self.m = 1.
         self.l = 1.
         self.viewer = None
-
-        high = np.array([1., 1., self.max_speed])
+        if stack is not None:
+            self.frames = deque(maxlen=stack)
+            high = np.ones((stack, 1)) * np.array([1., 1., self.max_speed])
+        else:
+            self.frames = None
+            high = np.array([1., 1., self.max_speed])
         self.action_space = spaces.Box(low=-self.max_torque, high=self.max_torque, shape=(1,), dtype=np.float32)
-        self.observation_space = spaces.Box(low=-high, high=high, dtype=np.float32)
+        if stack is not None:
+            self.observation_space = spaces.Box(low=-high, high=high, dtype=np.float32)
+        else:
+            self.observation_space = spaces.Box(low=-high, high=high, dtype=np.float32)
 
         self.seed()
 
@@ -60,7 +68,14 @@ class PendulumEnv(gym.Env):
 
     def _get_obs(self):
         theta, thetadot = self.state
-        return np.array([np.cos(theta), np.sin(theta), thetadot])
+        if self.frames is not None:
+            self.frames.append([np.cos(theta), np.sin(theta), thetadot])
+            while len(self.frames) < self.frames.maxlen:
+                self.frames.append([np.cos(theta), np.sin(theta), thetadot])
+            obs = np.array([x for x in self.frames])
+        else:
+            obs = np.array([np.cos(theta), np.sin(theta), thetadot])
+        return obs
 
     def render(self, mode='human'):
 

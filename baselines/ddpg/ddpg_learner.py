@@ -37,6 +37,8 @@ def get_target_updates(vars, target_vars, tau):
     logger.info('setting up target updates ...')
     soft_updates = []
     init_updates = []
+    print(vars)
+    print(target_vars)
     assert len(vars) == len(target_vars)
     for var, target_var in zip(vars, target_vars):
         logger.info('  {} <- {}'.format(target_var.name, var.name))
