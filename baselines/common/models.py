@@ -1,7 +1,7 @@
 import numpy as np
 import tensorflow as tf
 from baselines.a2c import utils
-from baselines.a2c.utils import conv, fc, conv_to_fc, batch_to_seq, seq_to_batch, ortho_init
+from baselines.a2c.utils import conv, fc, conv_to_fc, batch_to_seq, seq_to_batch, conv1
 from baselines.common.mpi_running_mean_std import RunningMeanStd
 
 mapping = {}
@@ -107,8 +107,7 @@ def mlp2_64(num_layers=2, num_hidden=64, activation=tf.tanh, layer_norm=False):
     def network_fn(X):
         h = tf.layers.flatten(X)
         for i in range(num_layers):
-            #h = fc(h, 'mlp_fc{}'.format(i), nh=num_hidden, init_scale=np.sqrt(2))
-            h = tf.keras.layers.Dense(num_hidden)(h)
+            h = fc(h, 'mlp_fc{}'.format(i), nh=num_hidden, init_scale=np.sqrt(2))
             if layer_norm:
                 h = tf.contrib.layers.layer_norm(h, center=True, scale=True)
             h = activation(h)
@@ -151,8 +150,8 @@ def mlp3_64(num_layers=3, num_hidden=64, activation=tf.tanh, layer_norm=False):
         return h
     return network_fn
 
-@register("mlp3_64")
-def mlp3_64(num_layers=3, num_hidden=256, activation=tf.tanh, layer_norm=False):
+@register("mlp3_256")
+def mlp3_256(num_layers=3, num_hidden=256, activation=tf.tanh, layer_norm=False):
     def network_fn(X):
         h = tf.layers.flatten(X)
         for i in range(num_layers):
@@ -164,7 +163,7 @@ def mlp3_64(num_layers=3, num_hidden=256, activation=tf.tanh, layer_norm=False):
     return network_fn
 
 @register("mlp3_1024")
-def mlp3_1024(num_layers=2, num_hidden=1024, activation=tf.tanh, layer_norm=False):
+def mlp3_1024(num_layers=3, num_hidden=1024, activation=tf.tanh, layer_norm=False):
     def network_fn(X):
         h = tf.layers.flatten(X)
         for i in range(num_layers):
@@ -178,12 +177,37 @@ def mlp3_1024(num_layers=2, num_hidden=1024, activation=tf.tanh, layer_norm=Fals
 @register("cnn_mlp_64")
 def cnn_mlp_64(num_hidden=64, activation=tf.tanh, layer_norm=False):
     def network_fn(X):
-        conv = tf.keras.layers.Conv1D(filters=num_hidden, kernel_size=4, activation='relu')(X)
-        h = tf.layers.flatten(conv)
+        activ = tf.nn.relu
+        h = activ(conv1(X, 'c1', nf=num_hidden, rf=4, stride=1, init_scale=np.sqrt(2)))
+        h = tf.layers.flatten(h)
         h = fc(h, 'mlp_fc0', nh=num_hidden, init_scale=np.sqrt(2))
         h = activation(h)
         return h
     return network_fn
+
+@register("cnn_mlp_256")
+def cnn_mlp_256(num_hidden=256, activation=tf.tanh, layer_norm=False):
+    def network_fn(X):
+        activ = tf.nn.relu
+        h = activ(conv1(X, 'c1', nf=num_hidden, rf=4, stride=1, init_scale=np.sqrt(2)))
+        h = tf.layers.flatten(h)
+        h = fc(h, 'mlp_fc0', nh=num_hidden, init_scale=np.sqrt(2))
+        h = activation(h)
+        return h
+    return network_fn
+
+@register("cnn_mlp_1024")
+def cnn_mlp_1024(num_hidden=1024, activation=tf.tanh, layer_norm=False):
+    def network_fn(X):
+        activ = tf.nn.relu
+        h = activ(conv1(X, 'c1', nf=num_hidden, rf=4, stride=1, init_scale=np.sqrt(2)))
+        h = tf.layers.flatten(h)
+        h = fc(h, 'mlp_fc0', nh=num_hidden, init_scale=np.sqrt(2))
+        h = activation(h)
+        return h
+    return network_fn
+
+
 
 @register("cnn")
 def cnn(**conv_kwargs):
@@ -262,9 +286,34 @@ def lstm(nlstm=128, layer_norm=False):
         initial_state = np.zeros(S.shape.as_list(), dtype=float)
 
         return h, {'S':S, 'M':M, 'state':snew, 'initial_state':initial_state}
-
     return network_fn
 
+@register("lstm1_64")
+def lstm1_64(nlstm=64, layer_norm=False):
+    def network_fn(X, nenv=1):
+        nbatch = X.shape[0]
+        nsteps = nbatch // nenv
+
+        print(nenv, nbatch, nsteps)
+
+        h = tf.layers.flatten(X)
+
+        M = tf.placeholder(tf.float32, [nbatch])  # mask (done t-1)
+        S = tf.placeholder(tf.float32, [nenv, 2 * nlstm])  # states
+
+        xs = batch_to_seq(h, nenv, nsteps)
+        ms = batch_to_seq(M, nenv, nsteps)
+
+        if layer_norm:
+            h5, snew = utils.lnlstm(xs, ms, S, scope='lnlstm', nh=nlstm)
+        else:
+            h5, snew = utils.lstm(xs, ms, S, scope='lstm', nh=nlstm)
+
+        h = seq_to_batch(h5)
+        initial_state = np.zeros(S.shape.as_list(), dtype=float)
+
+        return h, {'S': S, 'M': M, 'state': snew, 'initial_state': initial_state}
+    return network_fn
 
 @register("cnn_lstm")
 def cnn_lstm(nlstm=128, layer_norm=False, conv_fn=nature_cnn, **conv_kwargs):
