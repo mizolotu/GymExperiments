@@ -296,5 +296,5 @@ def learn(network, env, total_timesteps,
                 with open(os.path.join(logdir, 'eval_env_state.pkl'), 'wb') as f:
                     pickle.dump(eval_env.get_state(), f)
 
-
+    agent.sess.close()
     return agent
