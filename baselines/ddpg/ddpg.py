@@ -58,8 +58,8 @@ def learn(network, env, total_timesteps,
     assert (np.abs(env.action_space.low) == env.action_space.high).all()  # we assume symmetric actions.
 
     memory = Memory(limit=int(1e6), action_shape=env.action_space.shape, observation_shape=env.observation_space.shape)
-    critic = Critic(network=network, **network_kwargs)
-    actor = Actor(nb_actions, network=network, **network_kwargs)
+    critic = Critic(nenvs, network=network, **network_kwargs)
+    actor = Actor(nb_actions, nenvs, network=network, **network_kwargs)
 
     action_noise = None
     param_noise = None
@@ -83,13 +83,19 @@ def learn(network, env, total_timesteps,
     max_action = env.action_space.high
     logger.info('scaling actions by {} before executing in env'.format(max_action))
 
-    print(env.observation_space.shape, env.action_space.shape)
+    if 'lstm' in network:
+        step_batch = nenvs * nsteps
+        state_size = int(network.split('_')[1])
+    else:
+        step_batch = None
+        state_size = None
 
-    agent = DDPG(actor, critic, memory, env.observation_space.shape, env.action_space.shape,
+    agent = DDPG(actor, critic, memory, env.observation_space.shape, env.action_space.shape, nenvs, step_batch=step_batch, state_size=state_size,
         gamma=gamma, tau=tau, normalize_returns=normalize_returns, normalize_observations=normalize_observations,
         batch_size=batch_size, action_noise=action_noise, param_noise=param_noise, critic_l2_reg=critic_l2_reg,
         actor_lr=actor_lr, critic_lr=critic_lr, enable_popart=popart, clip_norm=clip_norm,
         reward_scale=reward_scale)
+
     logger.info('Using agent with the following configuration:')
     logger.info(str(agent.__dict__.items()))
 
@@ -125,7 +131,13 @@ def learn(network, env, total_timesteps,
 
         for cycle in range(nb_epoch_cycles):
 
+            #obs = np.zeros((nenvs, nsteps, env.observation_space.shape[0]))
+            mask = np.ones((nenvs, nsteps))
+
             obs = env.reset()
+
+            if state_size is not None:
+                state = np.zeros((nenvs, 2 * state_size))
 
             # Perform rollouts.
             if nenvs > 1:
@@ -138,7 +150,14 @@ def learn(network, env, total_timesteps,
             for t_rollout in range(nb_rollout_steps):
 
                 # Predict next action.
-                action, q, _, _ = agent.step(obs, apply_noise=True, compute_Q=True)
+
+                #obs[:, t_rollout, :] = obs_
+                #mask[:, t_rollout] = False
+
+                if state_size is not None:
+                    action, q, _, new_state = agent.step(obs, states=state, masks=mask, apply_noise=True, compute_Q=True)
+                else:
+                    action, q, _, new_state = agent.step(obs, apply_noise=True, compute_Q=True)
 
                 # Execute next action.
                 if rank == 0 and render:

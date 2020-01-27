@@ -291,10 +291,11 @@ def lstm(nlstm=128, layer_norm=False):
 @register("lstm1_64")
 def lstm1_64(nlstm=64, layer_norm=False):
     def network_fn(X, nenv=1):
+
         nbatch = X.shape[0]
         nsteps = nbatch // nenv
 
-        print(nenv, nbatch, nsteps)
+        print(X.shape, nenv, nbatch, nsteps)
 
         h = tf.layers.flatten(X)
 

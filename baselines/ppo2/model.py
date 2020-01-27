@@ -36,9 +36,11 @@ class Model(object):
         with tf.variable_scope('ppo2_model', reuse=tf.AUTO_REUSE):
             # CREATE OUR TWO MODELS
             # act_model that is used for sampling
+            print('act model')
             act_model = policy(nbatch_act, 1, sess)
 
             # Train model for training
+            print('train model')
             if microbatch_size is None:
                 train_model = policy(nbatch_train, nsteps, sess)
             else:
