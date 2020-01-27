@@ -193,7 +193,7 @@ def learn(network, env, total_timesteps,
                     mbflatinds = flatinds[mbenvinds].ravel()
                     slices = (arr[mbflatinds] for arr in (obs, returns, masks, actions, values, neglogpacs))
                     mbstates = states[mbenvinds]
-                    print(states.shape, mbstates.shape)
+                    # print(states.shape, mbstates.shape)
                     mblossvals.append(model.train(lrnow, cliprangenow, *slices, mbstates))
 
         # Feedforward --> get losses --> update
