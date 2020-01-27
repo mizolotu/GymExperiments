@@ -207,8 +207,6 @@ def cnn_mlp_1024(num_hidden=1024, activation=tf.tanh, layer_norm=False):
         return h
     return network_fn
 
-
-
 @register("cnn")
 def cnn(**conv_kwargs):
     def network_fn(X):
@@ -288,8 +286,8 @@ def lstm(nlstm=128, layer_norm=False):
         return h, {'S':S, 'M':M, 'state':snew, 'initial_state':initial_state}
     return network_fn
 
-@register("lstm1_64")
-def lstm1_64(nlstm=64, layer_norm=False):
+@register("lstm_64")
+def lstm_64(nlstm=64, layer_norm=False):
     def network_fn(X, nenv=1):
 
         nbatch = X.shape[0]
@@ -309,6 +307,84 @@ def lstm1_64(nlstm=64, layer_norm=False):
             h5, snew = utils.lnlstm(xs, ms, S, scope='lnlstm', nh=nlstm)
         else:
             h5, snew = utils.lstm(xs, ms, S, scope='lstm', nh=nlstm)
+
+        h = seq_to_batch(h5)
+        initial_state = np.zeros(S.shape.as_list(), dtype=float)
+
+        return h, {'S': S, 'M': M, 'state': snew, 'initial_state': initial_state}
+    return network_fn
+
+@register("lstm_256")
+def lstm_256(nlstm=256, layer_norm=False):
+    def network_fn(X, nenv=1):
+
+        nbatch = X.shape[0]
+        nsteps = nbatch // nenv
+
+        print(X.shape, nenv, nbatch, nsteps)
+
+        h = tf.layers.flatten(X)
+
+        M = tf.placeholder(tf.float32, [nbatch])  # mask (done t-1)
+        S = tf.placeholder(tf.float32, [nenv, 2 * nlstm])  # states
+
+        xs = batch_to_seq(h, nenv, nsteps)
+        ms = batch_to_seq(M, nenv, nsteps)
+
+        if layer_norm:
+            h5, snew = utils.lnlstm(xs, ms, S, scope='lnlstm', nh=nlstm)
+        else:
+            h5, snew = utils.lstm(xs, ms, S, scope='lstm', nh=nlstm)
+
+        h = seq_to_batch(h5)
+        initial_state = np.zeros(S.shape.as_list(), dtype=float)
+
+        return h, {'S': S, 'M': M, 'state': snew, 'initial_state': initial_state}
+    return network_fn
+
+@register("alstm_64")
+def lstm_64(nlstm=64, layer_norm=False):
+    def network_fn(X, nenv=1):
+
+        nbatch = X.shape[0]
+        nsteps = nbatch // nenv
+
+        print(X.shape, nenv, nbatch, nsteps)
+
+        h = tf.layers.flatten(X)
+
+        M = tf.placeholder(tf.float32, [nbatch])  # mask (done t-1)
+        S = tf.placeholder(tf.float32, [nenv, 2 * nlstm])  # states
+
+        xs = batch_to_seq(h, nenv, nsteps)
+        ms = batch_to_seq(M, nenv, nsteps)
+
+        h5, snew = utils.alstm(xs, ms, S, scope='lstm', nh=nlstm)
+
+        h = seq_to_batch(h5)
+        initial_state = np.zeros(S.shape.as_list(), dtype=float)
+
+        return h, {'S': S, 'M': M, 'state': snew, 'initial_state': initial_state}
+    return network_fn
+
+@register("alstm_256")
+def lstm_256(nlstm=256, layer_norm=False):
+    def network_fn(X, nenv=1):
+
+        nbatch = X.shape[0]
+        nsteps = nbatch // nenv
+
+        print(X.shape, nenv, nbatch, nsteps)
+
+        h = tf.layers.flatten(X)
+
+        M = tf.placeholder(tf.float32, [nbatch])  # mask (done t-1)
+        S = tf.placeholder(tf.float32, [nenv, 2 * nlstm])  # states
+
+        xs = batch_to_seq(h, nenv, nsteps)
+        ms = batch_to_seq(M, nenv, nsteps)
+
+        h5, snew = utils.alstm(xs, ms, S, scope='lstm', nh=nlstm)
 
         h = seq_to_batch(h5)
         initial_state = np.zeros(S.shape.as_list(), dtype=float)

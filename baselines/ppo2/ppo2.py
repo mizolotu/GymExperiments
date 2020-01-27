@@ -217,6 +217,8 @@ def learn(network, env, total_timesteps,
 
             logger.logkv("misc/explained_variance", float(ev))
             logger.logkv('stats/eprewmean', safemean([epinfo['r'] for epinfo in epinfobuf]))
+            logger.logkv('stats/eprewmin', np.min([epinfo['r'] for epinfo in epinfobuf]))
+            logger.logkv('stats/eprewmax', np.max([epinfo['r'] for epinfo in epinfobuf]))
             logger.logkv('stats/eplenmean', safemean([epinfo['l'] for epinfo in epinfobuf]))
             if eval_env is not None:
                 logger.logkv('stats/eval_eprewmean', safemean([epinfo['r'] for epinfo in eval_epinfobuf]) )

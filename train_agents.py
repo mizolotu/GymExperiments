@@ -62,8 +62,8 @@ if __name__ == '__main__':
     ]
 
     algorithms = [
-        {'name': 'ddpg', 'learn': learn_ddpg},
-        {'name': 'ppo', 'learn': learn_ppo}
+        {'name': 'ppo', 'learn': learn_ppo},
+        {'name': 'ddpg', 'learn': learn_ddpg}
     ]
 
     networks = [
@@ -76,7 +76,13 @@ if __name__ == '__main__':
         'cnn_mlp_64',
         'cnn_mlp_256',
         'cnn_mlp_1024',
-        'lstm1_64'
+    ]
+
+    r_networks = [
+        'alstm_64',
+        'alstm_256',
+        'lstm_64',
+        'lstm_256'
     ]
 
     n_envs = int(sys.argv[1])
@@ -86,7 +92,10 @@ if __name__ == '__main__':
     total_timesteps = n_episodes * n_steps * n_envs
     print('Total time steps: {0}'.format(total_timesteps))
 
-    for network in networks:
-        if '' in network:
-            print(network)
-            test_alg_on_env(env_classes[0], algorithms[0], network, ne=n_envs, ns=n_steps, tt=total_timesteps)
+    for algorithm in algorithms:
+        if algorithm['name'] == 'ppo':
+            nets = r_networks + networks
+        else:
+            nets = networks
+        for network in nets:
+            test_alg_on_env(env_classes[0], algorithm, network, ne=n_envs, ns=n_steps, tt=total_timesteps)
