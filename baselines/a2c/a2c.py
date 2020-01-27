@@ -1,6 +1,7 @@
 import time
 import functools
 import tensorflow as tf
+import numpy as np
 
 from baselines import logger
 
@@ -209,7 +210,6 @@ def learn(
     for update in range(1, total_timesteps//nbatch+1):
         # Get mini batch of experiences
         obs, states, rewards, masks, actions, values, epinfos = runner.run()
-        print(epinfos)
         epinfobuf.extend(epinfos)
 
         policy_loss, value_loss, policy_entropy = model.train(obs, states, rewards, masks, actions, values)
@@ -228,7 +228,8 @@ def learn(
             logger.record_tabular("value_loss", float(value_loss))
             logger.record_tabular("explained_variance", float(ev))
             logger.record_tabular("eprewmean", safemean([epinfo['r'] for epinfo in epinfobuf]))
-            logger.record_tabular("eprewmean", safemean([epinfo['r'] for epinfo in epinfobuf]))
+            logger.record_tabular("eprewmin", np.min([epinfo['r'] for epinfo in epinfobuf]))
+            logger.record_tabular("eprewmax", np.max([epinfo['r'] for epinfo in epinfobuf]))
             logger.record_tabular("eplenmean", safemean([epinfo['l'] for epinfo in epinfobuf]))
             logger.dump_tabular()
     model.sess.close()
