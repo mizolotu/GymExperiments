@@ -55,6 +55,7 @@ def traj_segment_generator(pi, env, horizon, stochastic):
             ep_lens = []
         i = t % horizon
         obs[i] = ob
+        print(vpred.shape)
         vpreds[i] = vpred
         news[i] = new
         acs[i] = ac
@@ -90,7 +91,8 @@ def learn(*,
         network,
         env,
         total_timesteps,
-        timesteps_per_batch=125, # what to train on
+        log_interval=1,
+        nsteps=125, # what to train on
         max_kl=0.001,
         cg_iters=10,
         gamma=0.99,
@@ -104,7 +106,7 @@ def learn(*,
         callback=None,
         load_path=None,
         **network_kwargs
-        ):
+    ):
     '''
     learn a policy function with TRPO algorithm
 
@@ -149,6 +151,8 @@ def learn(*,
     learnt model
 
     '''
+
+    timesteps_per_batch = nsteps
 
     if MPI is not None:
         nworkers = MPI.COMM_WORLD.Get_size()
@@ -274,7 +278,8 @@ def learn(*,
     iters_so_far = 0
     tstart = time.time()
     lenbuffer = deque(maxlen=40) # rolling buffer for episode lengths
-    rewbuffer = deque(maxlen=40) # rolling buffer for episode rewards
+    nenvs = env.num_envs
+    rewbuffer = deque(maxlen=log_interval * nenvs * nsteps) # rolling buffer for episode rewards
 
     if sum([max_iters>0, total_timesteps>0, max_episodes>0])==0:
         # noththing to be done
@@ -374,9 +379,11 @@ def learn(*,
         lens, rews = map(flatten_lists, zip(*listoflrpairs))
         lenbuffer.extend(lens)
         rewbuffer.extend(rews)
-
-        logger.record_tabular("EpLenMean", np.mean(lenbuffer))
-        logger.record_tabular("EpRewMean", np.mean(rewbuffer))
+        if iters_so_far % log_interval == 0:
+            logger.record_tabular("EpLenMean", np.mean(lenbuffer))
+            logger.record_tabular("eprewmean", np.mean(rewbuffer))
+            logger.record_tabular("eprewmin", np.min(rewbuffer))
+        logger.record_tabular("eprewmax", np.max(rewbuffer))
         logger.record_tabular("EpThisIter", len(lens))
         episodes_so_far += len(lens)
         timesteps_so_far += sum(lens)

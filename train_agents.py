@@ -62,6 +62,7 @@ if __name__ == '__main__':
     ]
 
     algorithms = [
+        {'name': 'a2c', 'learn': learn_a2c},
         {'name': 'ppo', 'learn': learn_ppo},
         {'name': 'ddpg', 'learn': learn_ddpg}
     ]
@@ -79,10 +80,9 @@ if __name__ == '__main__':
     ]
 
     r_networks = [
-        'alstm_64',
-        'alstm_256',
         'lstm_64',
-        'lstm_256'
+        'lstm_256',
+        'lstm_1024'
     ]
 
     n_envs = int(sys.argv[1])
@@ -93,7 +93,7 @@ if __name__ == '__main__':
     print('Total time steps: {0}'.format(total_timesteps))
 
     for algorithm in algorithms:
-        if algorithm['name'] == 'ppo':
+        if algorithm['name'] in ['ppo', 'a2c']:
             nets = r_networks + networks
         else:
             nets = networks

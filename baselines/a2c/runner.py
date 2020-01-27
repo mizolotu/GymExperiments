@@ -19,10 +19,16 @@ class Runner(AbstractEnvRunner):
         self.ob_dtype = model.train_model.X.dtype.as_numpy_dtype
 
     def run(self):
+
+        self.obs = self.env.reset()
+
         # We initialize the lists that will contain the mb of experiences
+
         mb_obs, mb_rewards, mb_actions, mb_values, mb_dones = [],[],[],[],[]
         mb_states = self.states
         epinfos = []
+        scores = [[] for _ in range(self.env.num_envs)]
+        steps = [0 for _ in range(self.env.num_envs)]
         for n in range(self.nsteps):
             # Given observations, take action and value (V(s))
             # We already have self.obs because Runner superclass run self.obs[:] = env.reset() on init
@@ -36,13 +42,18 @@ class Runner(AbstractEnvRunner):
 
             # Take actions in env and look the results
             obs, rewards, dones, infos = self.env.step(actions)
-            for info in infos:
-                maybeepinfo = info.get('episode')
-                if maybeepinfo: epinfos.append(maybeepinfo)
+
+            for i in range(len(infos)):
+                if 'r' in infos[i].keys():
+                    scores[i].append(infos[i]['r'])
+                if 'l' in infos[i].keys() and infos[i]['l'] > steps[i]:
+                    steps[i] = infos[i]['l']
             self.states = states
             self.dones = dones
             self.obs = obs
             mb_rewards.append(rewards)
+        for i in range(self.env.num_envs):
+            epinfos.append({'r': np.mean(scores[i]), 'l': steps[i]})
         mb_dones.append(self.dones)
 
         # Batch of steps to batch of rollouts

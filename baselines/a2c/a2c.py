@@ -34,17 +34,18 @@ class Model(object):
             ent_coef=0.01, vf_coef=0.5, max_grad_norm=0.5, lr=7e-4,
             alpha=0.99, epsilon=1e-5, total_timesteps=int(80e6), lrschedule='linear'):
 
-        sess = tf_util.get_session()
+        tf.reset_default_graph()
+        self.sess = tf_util.get_session()
         nenvs = env.num_envs
         nbatch = nenvs*nsteps
 
 
         with tf.variable_scope('a2c_model', reuse=tf.AUTO_REUSE):
             # step_model is used for sampling
-            step_model = policy(nenvs, 1, sess)
+            step_model = policy(nenvs, 1, self.sess)
 
             # train_model is used to train our network
-            train_model = policy(nbatch, nsteps, sess)
+            train_model = policy(nbatch, nsteps, self.sess)
 
         A = tf.placeholder(train_model.action.dtype, train_model.action.shape)
         ADV = tf.placeholder(tf.float32, [nbatch])
@@ -98,7 +99,7 @@ class Model(object):
             if states is not None:
                 td_map[train_model.S] = states
                 td_map[train_model.M] = masks
-            policy_loss, value_loss, policy_entropy, _ = sess.run(
+            policy_loss, value_loss, policy_entropy, _ = self.sess.run(
                 [pg_loss, vf_loss, entropy, _train],
                 td_map
             )
@@ -111,9 +112,9 @@ class Model(object):
         self.step = step_model.step
         self.value = step_model.value
         self.initial_state = step_model.initial_state
-        self.save = functools.partial(tf_util.save_variables, sess=sess)
-        self.load = functools.partial(tf_util.load_variables, sess=sess)
-        tf.global_variables_initializer().run(session=sess)
+        self.save = functools.partial(tf_util.save_variables, sess=self.sess)
+        self.load = functools.partial(tf_util.load_variables, sess=self.sess)
+        tf.global_variables_initializer().run(session=self.sess)
 
 
 def learn(
@@ -197,7 +198,7 @@ def learn(
 
     # Instantiate the runner object
     runner = Runner(env, model, nsteps=nsteps, gamma=gamma)
-    epinfobuf = deque(maxlen=100)
+    epinfobuf = deque(maxlen=log_interval*nenvs)
 
     # Calculate the batch_size
     nbatch = nenvs*nsteps
@@ -208,6 +209,7 @@ def learn(
     for update in range(1, total_timesteps//nbatch+1):
         # Get mini batch of experiences
         obs, states, rewards, masks, actions, values, epinfos = runner.run()
+        print(epinfos)
         epinfobuf.extend(epinfos)
 
         policy_loss, value_loss, policy_entropy = model.train(obs, states, rewards, masks, actions, values)
@@ -226,7 +228,9 @@ def learn(
             logger.record_tabular("value_loss", float(value_loss))
             logger.record_tabular("explained_variance", float(ev))
             logger.record_tabular("eprewmean", safemean([epinfo['r'] for epinfo in epinfobuf]))
+            logger.record_tabular("eprewmean", safemean([epinfo['r'] for epinfo in epinfobuf]))
             logger.record_tabular("eplenmean", safemean([epinfo['l'] for epinfo in epinfobuf]))
             logger.dump_tabular()
+    model.sess.close()
     return model
 
