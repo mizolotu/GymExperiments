@@ -80,9 +80,8 @@ if __name__ == '__main__':
     ]
 
     r_networks = [
-        'lstm_64',
-        'lstm_256',
-        'lstm_1024'
+        #'lstm_64',
+        #'lstm_256'
     ]
 
     n_envs = int(sys.argv[1])
