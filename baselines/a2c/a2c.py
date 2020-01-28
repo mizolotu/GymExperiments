@@ -127,7 +127,7 @@ def learn(
     vf_coef=0.5,
     ent_coef=0.01,
     max_grad_norm=0.5,
-    lr=7e-4,
+    lr=1e-3,
     lrschedule='linear',
     epsilon=1e-5,
     alpha=0.99,

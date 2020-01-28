@@ -87,15 +87,17 @@ if __name__ == '__main__':
 
     n_envs = int(sys.argv[1])
     n_episodes = int(sys.argv[2])
+    algs = sys.argv[3].split(',')
 
     n_steps = 125
     total_timesteps = n_episodes * n_steps * n_envs
     print('Total time steps: {0}'.format(total_timesteps))
 
     for algorithm in algorithms:
-        if algorithm['name'] in ['ppo', 'a2c']:
-            nets = r_networks + networks
-        else:
-            nets = networks
-        for network in nets:
-            test_alg_on_env(env_classes[0], algorithm, network, ne=n_envs, ns=n_steps, tt=total_timesteps)
+        if algorithm['name'] in algs:
+            if algorithm['name'] in ['ppo', 'a2c']:
+                nets = r_networks + networks
+            else:
+                nets = networks
+            for network in nets:
+                test_alg_on_env(env_classes[0], algorithm, network, ne=n_envs, ns=n_steps, tt=total_timesteps)
