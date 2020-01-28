@@ -83,27 +83,30 @@ class Model(object):
         # For instance zip(ABCD, xyza) => Ax, By, Cz, Da
 
         # 3. Make op for one policy and value update step of A2C
-        trainer = tf.train.RMSPropOptimizer(learning_rate=LR, decay=alpha, epsilon=epsilon)
+        #trainer = tf.train.RMSPropOptimizer(learning_rate=LR, decay=alpha, epsilon=epsilon)
+        trainer = tf.train.AdamOptimizer(learning_rate=LR, epsilon=1e-5)
 
         _train = trainer.apply_gradients(grads)
 
-        lr = Scheduler(v=lr, nvalues=total_timesteps, schedule=lrschedule)
+        #lr = Scheduler(v=lr, nvalues=total_timesteps, schedule=lrschedule)
 
         def train(obs, states, rewards, masks, actions, values):
             # Here we calculate advantage A(s,a) = R + yV(s') - V(s)
             # rewards = R + yV(s')
             advs = rewards - values
-            for step in range(len(obs)):
-                cur_lr = lr.value()
 
-            td_map = {train_model.X:obs, A:actions, ADV:advs, R:rewards, LR:cur_lr}
+            #for step in range(len(obs)):
+            #    cur_lr = lr.value()
+
+            td_map = {train_model.X:obs, A:actions, ADV:advs, R:rewards, LR:lr}
             if states is not None:
                 td_map[train_model.S] = states
                 td_map[train_model.M] = masks
-            policy_loss, value_loss, policy_entropy, _ = self.sess.run(
-                [pg_loss, vf_loss, entropy, _train],
-                td_map
-            )
+            for e in range(4):
+                policy_loss, value_loss, policy_entropy, _ = self.sess.run(
+                    [pg_loss, vf_loss, entropy, _train],
+                    td_map
+                )
             return policy_loss, value_loss, policy_entropy
 
 
@@ -125,7 +128,7 @@ def learn(
     nsteps=5,
     total_timesteps=int(80e6),
     vf_coef=0.5,
-    ent_coef=0.01,
+    ent_coef=0.0,
     max_grad_norm=0.5,
     lr=1e-3,
     lrschedule='linear',
@@ -212,6 +215,8 @@ def learn(
         obs, states, rewards, masks, actions, values, epinfos = runner.run()
         epinfobuf.extend(epinfos)
 
+        #rewards_std = (rewards - rewards.mean()) / (rewards.std() + 1e-8)
+
         policy_loss, value_loss, policy_entropy = model.train(obs, states, rewards, masks, actions, values)
         nseconds = time.time()-tstart
 
@@ -225,6 +230,7 @@ def learn(
             logger.record_tabular("total_timesteps", update*nbatch)
             logger.record_tabular("fps", fps)
             logger.record_tabular("policy_entropy", float(policy_entropy))
+            logger.record_tabular("policy_loss", float(policy_loss))
             logger.record_tabular("value_loss", float(value_loss))
             logger.record_tabular("explained_variance", float(ev))
             logger.record_tabular("eprewmean", safemean([epinfo['r'] for epinfo in epinfobuf]))

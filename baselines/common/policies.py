@@ -64,6 +64,16 @@ class PolicyWithValue(object):
             self.vf = fc(vf_latent, 'vf', 1)
             self.vf = self.vf[:,0]
 
+        total_parameters = 0
+        for variable in tf.trainable_variables():
+            # shape is an array of tf.Dimension
+            shape = variable.get_shape()
+            variable_parameters = 1
+            for dim in shape:
+                variable_parameters *= dim.value
+            total_parameters += variable_parameters
+        print('Trainable parameters: {0}'.format(total_parameters))
+
     def _evaluate(self, variables, observation, **extra_feed):
         sess = self.sess
         feed_dict = {self.X: adjust_shape(self.X, observation)}

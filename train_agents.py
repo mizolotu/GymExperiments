@@ -77,16 +77,20 @@ if __name__ == '__main__':
         'cnn_mlp_64',
         'cnn_mlp_256',
         'cnn_mlp_1024',
+        'cnn2_64',
+        'cnn2_256',
+        'cnn2_1024'
     ]
 
     r_networks = [
-        #'lstm_64',
-        #'lstm_256'
+        'lstm_64',
+        'lstm_256'
     ]
 
     n_envs = int(sys.argv[1])
     n_episodes = int(sys.argv[2])
     algs = sys.argv[3].split(',')
+    prefix = sys.argv[4]
 
     n_steps = 125
     total_timesteps = n_episodes * n_steps * n_envs
@@ -99,4 +103,5 @@ if __name__ == '__main__':
             else:
                 nets = networks
             for network in nets:
-                test_alg_on_env(env_classes[0], algorithm, network, ne=n_envs, ns=n_steps, tt=total_timesteps)
+                if prefix in network:
+                    test_alg_on_env(env_classes[0], algorithm, network, ne=n_envs, ns=n_steps, tt=total_timesteps)
