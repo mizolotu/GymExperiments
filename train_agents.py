@@ -76,10 +76,7 @@ if __name__ == '__main__':
         'mlp3_1024',
         'cnn_mlp_64',
         'cnn_mlp_256',
-        'cnn_mlp_1024',
-        'cnn2_64',
-        'cnn2_256',
-        'cnn2_1024'
+        'cnn_mlp_1024'
     ]
 
     r_networks = [
