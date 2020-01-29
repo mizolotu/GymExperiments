@@ -21,6 +21,7 @@ import numpy as np
 import gym
 from gym import spaces
 from gym.utils import seeding
+from collections import deque
 
 class Continuous_MountainCarEnv(gym.Env):
     metadata = {
@@ -28,7 +29,7 @@ class Continuous_MountainCarEnv(gym.Env):
         'video.frames_per_second': 30
     }
 
-    def __init__(self, goal_velocity = 0):
+    def __init__(self, goal_velocity = 0, stack=None):
         self.min_action = -1.0
         self.max_action = 1.0
         self.min_position = -1.2
@@ -38,15 +39,20 @@ class Continuous_MountainCarEnv(gym.Env):
         self.goal_velocity = goal_velocity
         self.power = 0.0015
 
-        self.low_state = np.array([self.min_position, -self.max_speed])
-        self.high_state = np.array([self.max_position, self.max_speed])
-
         self.viewer = None
+        self.step_count = 0
 
-        self.action_space = spaces.Box(low=self.min_action, high=self.max_action,
-                                       shape=(1,), dtype=np.float32)
-        self.observation_space = spaces.Box(low=self.low_state, high=self.high_state,
-                                            dtype=np.float32)
+        if stack is not None:
+            self.frames = deque(maxlen=stack)
+            self.low_state = np.ones((stack, 1)) * np.array([self.min_position, -self.max_speed])
+            self.high_state = np.ones((stack, 1)) * np.array([self.max_position, self.max_speed])
+        else:
+            self.frames = None
+            self.low_state = np.array([self.min_position, -self.max_speed])
+            self.high_state = np.array([self.max_position, self.max_speed])
+
+        self.action_space = spaces.Box(low=self.min_action, high=self.max_action, shape=(1,), dtype=np.float32)
+        self.observation_space = spaces.Box(low=self.low_state, high=self.high_state, dtype=np.float32)
 
         self.seed()
         self.reset()
@@ -56,6 +62,8 @@ class Continuous_MountainCarEnv(gym.Env):
         return [seed]
 
     def step(self, action):
+
+        self.step_count += 1
 
         position = self.state[0]
         velocity = self.state[1]
@@ -77,11 +85,23 @@ class Continuous_MountainCarEnv(gym.Env):
         reward-= math.pow(action[0],2)*0.1
 
         self.state = np.array([position, velocity])
-        return self.state, reward, done, {}
+        if self.frames is not None:
+            self.frames.append(self.state)
+            obs = np.array([x for x in self.frames])
+        else:
+            obs = self.state
+        return obs, reward, done, {'r': reward, 'l': self.step_count}
 
     def reset(self):
+        self.step_count = 0
         self.state = np.array([self.np_random.uniform(low=-0.6, high=-0.4), 0])
-        return np.array(self.state)
+        if self.frames is not None:
+            while len(self.frames) < self.frames.maxlen:
+                self.frames.append(self.state)
+            obs = np.array([x for x in self.frames])
+        else:
+            obs = np.array([self.np_random.uniform(low=-0.6, high=-0.4), 0])
+        return obs
 
 #    def get_state(self):
 #        return self.state

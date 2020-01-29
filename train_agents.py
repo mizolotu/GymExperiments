@@ -56,9 +56,8 @@ if __name__ == '__main__':
     env_classes = [
         PendulumEnv,
         Continuous_MountainCarEnv,
-        CarRacing,
-        LunarLanderContinuous,
-        BipedalWalker
+        BipedalWalker,
+        LunarLanderContinuous
     ]
 
     algorithms = [
@@ -84,10 +83,11 @@ if __name__ == '__main__':
         'lstm_256'
     ]
 
-    n_envs = int(sys.argv[1])
-    n_episodes = int(sys.argv[2])
-    algs = sys.argv[3].split(',')
-    prefix = sys.argv[4]
+    env_class_idx = int(sys.argv[1])
+    n_envs = int(sys.argv[2])
+    n_episodes = int(sys.argv[3])
+    algs = sys.argv[4].split(',')
+    prefix = sys.argv[5]
 
     n_steps = 125
     total_timesteps = n_episodes * n_steps * n_envs
@@ -101,4 +101,4 @@ if __name__ == '__main__':
                 nets = networks
             for network in nets:
                 if prefix in network:
-                    test_alg_on_env(env_classes[0], algorithm, network, ne=n_envs, ns=n_steps, tt=total_timesteps)
+                    test_alg_on_env(env_classes[env_class_idx], algorithm, network, ne=n_envs, ns=n_steps, tt=total_timesteps)
