@@ -38,8 +38,7 @@ class Model(object):
         tf.reset_default_graph()
         self.sess = tf_util.get_session()
         nenvs = env.num_envs
-        nbatch = nenvs*nsteps
-
+        nbatch = nsteps * nenvs
 
         with tf.variable_scope('a2c_model', reuse=tf.AUTO_REUSE):
             # step_model is used for sampling
@@ -65,7 +64,7 @@ class Model(object):
         entropy = tf.reduce_mean(train_model.pd.entropy())
 
         # Value loss
-        vf_loss = losses.mean_squared_error(tf.squeeze(train_model.vf), R)
+        vf_loss = 0.5 * losses.mean_squared_error(tf.squeeze(train_model.vf), R)
 
         loss = pg_loss - entropy*ent_coef + vf_loss * vf_coef
 
@@ -91,8 +90,10 @@ class Model(object):
         #lr = Scheduler(v=lr, nvalues=total_timesteps, schedule=lrschedule)
 
         def train(obs, states, rewards, masks, actions, values):
+
             # Here we calculate advantage A(s,a) = R + yV(s') - V(s)
             # rewards = R + yV(s')
+
             advs = rewards - values
 
             #for step in range(len(obs)):
@@ -102,11 +103,10 @@ class Model(object):
             if states is not None:
                 td_map[train_model.S] = states
                 td_map[train_model.M] = masks
-            for e in range(4):
-                policy_loss, value_loss, policy_entropy, _ = self.sess.run(
-                    [pg_loss, vf_loss, entropy, _train],
-                    td_map
-                )
+            policy_loss, value_loss, policy_entropy, _ = self.sess.run(
+                [pg_loss, vf_loss, entropy, _train],
+                td_map
+            )
             return policy_loss, value_loss, policy_entropy
 
 
@@ -215,10 +215,10 @@ def learn(
         obs, states, rewards, masks, actions, values, epinfos = runner.run()
         epinfobuf.extend(epinfos)
 
-        #rewards_std = (rewards - rewards.mean()) / (rewards.std() + 1e-8)
+        rewards_std = (rewards - rewards.mean()) / (rewards.std() + 1e-8)
+        policy_loss, value_loss, policy_entropy = model.train(obs, states, rewards_std, masks, actions, values)
 
-        policy_loss, value_loss, policy_entropy = model.train(obs, states, rewards, masks, actions, values)
-        nseconds = time.time()-tstart
+        nseconds = time.time() - tstart
 
         # Calculate the fps (frame per second)
         fps = int((update*nbatch)/nseconds)

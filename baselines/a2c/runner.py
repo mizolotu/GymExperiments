@@ -16,6 +16,7 @@ class Runner(AbstractEnvRunner):
         super().__init__(env=env, model=model, nsteps=nsteps)
         self.gamma = gamma
         self.batch_action_shape = [x if x is not None else -1 for x in model.train_model.action.shape.as_list()]
+        #self.batch_action_shape = [env.num_envs * nsteps, 1]
         self.ob_dtype = model.train_model.X.dtype.as_numpy_dtype
 
     def run(self):
@@ -69,13 +70,28 @@ class Runner(AbstractEnvRunner):
         if self.gamma > 0.0:
             # Discount/bootstrap off value fn
             last_values = self.model.value(self.obs, S=self.states, M=self.dones).tolist()
-            for n, (rewards, dones, value) in enumerate(zip(mb_rewards, mb_dones, last_values)):
-                rewards = rewards.tolist()
-                dones = dones.tolist()
-                if dones[-1] == 0:
-                    rewards = discount_with_dones(rewards+[value], dones+[0], self.gamma)[:-1]
-                else:
-                    rewards = discount_with_dones(rewards, dones, self.gamma)
+
+            for n, (rewards, dones, values, last_value, last_done) in enumerate(zip(mb_rewards, mb_dones, mb_values, last_values, self.dones)):
+
+                #rewards = rewards.tolist()
+                #dones = dones.tolist()
+                #if dones[-1] == 0:
+                #    rewards = discount_with_dones(rewards+[value], dones+[0], self.gamma)[:-1]
+                #else:
+                #    rewards = discount_with_dones(rewards, dones, self.gamma)
+
+                advs = np.zeros(self.nsteps)
+                lastgaelam = 0
+                for t in reversed(range(self.nsteps)):
+                    if t == self.nsteps - 1:
+                        nextnonterminal = 1.0 - last_done
+                        nextvalues = last_value
+                    else:
+                        nextnonterminal = 1.0 - dones[t + 1]
+                        nextvalues = values[t + 1]
+                    delta = rewards[t] + self.gamma * nextvalues * nextnonterminal - values[t]
+                    advs[t] = lastgaelam = delta + self.gamma * 0.95 * nextnonterminal * lastgaelam
+                rewards = advs + values
 
                 mb_rewards[n] = rewards
 

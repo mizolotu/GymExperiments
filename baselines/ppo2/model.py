@@ -1,4 +1,5 @@
 import tensorflow as tf
+import numpy as np
 import functools
 
 from baselines.common.tf_util import get_session, save_variables, load_variables
@@ -136,6 +137,7 @@ class Model(object):
             sync_from_root(sess, global_variables, comm=comm) #pylint: disable=E1101
 
     def train(self, lr, cliprange, obs, returns, masks, actions, values, neglogpacs, states=None):
+
         # Here we calculate advantage A(s,a) = R + yV(s') - V(s)
         # Returns = R + yV(s')
         advs = returns - values
