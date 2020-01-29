@@ -100,7 +100,7 @@ class Continuous_MountainCarEnv(gym.Env):
                 self.frames.append(self.state)
             obs = np.array([x for x in self.frames])
         else:
-            obs = np.array([self.np_random.uniform(low=-0.6, high=-0.4), 0])
+            obs = self.state
         return obs
 
 #    def get_state(self):
