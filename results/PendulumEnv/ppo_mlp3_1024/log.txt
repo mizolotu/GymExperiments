@@ -1,0 +1,1918 @@
+Logging to /home/mizolotu/GymExperiments/log/PendulumEnv/ppo_mlp3_1024
+---------------------------------------
+| misc/approxkl           | 0.00397   |
+| misc/clipfrac           | 0.0461    |
+| misc/explained_variance | -0.000625 |
+| misc/fps                | 3.51e+03  |
+| misc/nupdates           | 1         |
+| misc/policy_entropy     | 1.42      |
+| misc/policy_loss        | 91.6      |
+| misc/serial_timesteps   | 125       |
+| misc/time_elapsed       | 0.57      |
+| misc/total_timesteps    | 2e+03     |
+| misc/value_loss         | 4.83e+03  |
+| stats/eplenmean         | 125       |
+| stats/eprewmax          | -3.92     |
+| stats/eprewmean         | -6.2      |
+| stats/eprewmin          | -8.83     |
+---------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0122   |
+| misc/clipfrac           | 0.148    |
+| misc/explained_variance | 0.00396  |
+| misc/fps                | 3.97e+03 |
+| misc/nupdates           | 50       |
+| misc/policy_entropy     | 1.67     |
+| misc/policy_loss        | 66.7     |
+| misc/serial_timesteps   | 6.25e+03 |
+| misc/time_elapsed       | 24.8     |
+| misc/total_timesteps    | 1e+05    |
+| misc/value_loss         | 2.52e+03 |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -3       |
+| stats/eprewmean         | -6.59    |
+| stats/eprewmin          | -9.29    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.00381  |
+| misc/clipfrac           | 0.0321   |
+| misc/explained_variance | 0.000286 |
+| misc/fps                | 3.91e+03 |
+| misc/nupdates           | 100      |
+| misc/policy_entropy     | 1.91     |
+| misc/policy_loss        | 44.7     |
+| misc/serial_timesteps   | 1.25e+04 |
+| misc/time_elapsed       | 50       |
+| misc/total_timesteps    | 2e+05    |
+| misc/value_loss         | 1.46e+03 |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -3.44    |
+| stats/eprewmean         | -6.39    |
+| stats/eprewmin          | -9.31    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.00598  |
+| misc/clipfrac           | 0.076    |
+| misc/explained_variance | 0.000661 |
+| misc/fps                | 3.97e+03 |
+| misc/nupdates           | 150      |
+| misc/policy_entropy     | 2.16     |
+| misc/policy_loss        | 46.3     |
+| misc/serial_timesteps   | 1.88e+04 |
+| misc/time_elapsed       | 75.1     |
+| misc/total_timesteps    | 3e+05    |
+| misc/value_loss         | 1.43e+03 |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -3.03    |
+| stats/eprewmean         | -6.28    |
+| stats/eprewmin          | -9.21    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.00289  |
+| misc/clipfrac           | 0.0227   |
+| misc/explained_variance | 0.0111   |
+| misc/fps                | 4e+03    |
+| misc/nupdates           | 200      |
+| misc/policy_entropy     | 2.45     |
+| misc/policy_loss        | 43.3     |
+| misc/serial_timesteps   | 2.5e+04  |
+| misc/time_elapsed       | 100      |
+| misc/total_timesteps    | 4e+05    |
+| misc/value_loss         | 1.15e+03 |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -3.07    |
+| stats/eprewmean         | -6.29    |
+| stats/eprewmin          | -9.35    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.00254  |
+| misc/clipfrac           | 0.02     |
+| misc/explained_variance | 0.556    |
+| misc/fps                | 3.84e+03 |
+| misc/nupdates           | 250      |
+| misc/policy_entropy     | 2.64     |
+| misc/policy_loss        | 21.1     |
+| misc/serial_timesteps   | 3.12e+04 |
+| misc/time_elapsed       | 125      |
+| misc/total_timesteps    | 5e+05    |
+| misc/value_loss         | 435      |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -3.49    |
+| stats/eprewmean         | -6.25    |
+| stats/eprewmin          | -9.1     |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.00324  |
+| misc/clipfrac           | 0.0349   |
+| misc/explained_variance | 0.678    |
+| misc/fps                | 4.07e+03 |
+| misc/nupdates           | 300      |
+| misc/policy_entropy     | 2.79     |
+| misc/policy_loss        | 18.5     |
+| misc/serial_timesteps   | 3.75e+04 |
+| misc/time_elapsed       | 150      |
+| misc/total_timesteps    | 6e+05    |
+| misc/value_loss         | 470      |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -2.98    |
+| stats/eprewmean         | -6.06    |
+| stats/eprewmin          | -9.15    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.00441  |
+| misc/clipfrac           | 0.0532   |
+| misc/explained_variance | 0.813    |
+| misc/fps                | 4.09e+03 |
+| misc/nupdates           | 350      |
+| misc/policy_entropy     | 2.75     |
+| misc/policy_loss        | -14.9    |
+| misc/serial_timesteps   | 4.38e+04 |
+| misc/time_elapsed       | 175      |
+| misc/total_timesteps    | 7e+05    |
+| misc/value_loss         | 302      |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -1.04    |
+| stats/eprewmean         | -5.3     |
+| stats/eprewmin          | -9.35    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0164   |
+| misc/clipfrac           | 0.177    |
+| misc/explained_variance | 0.954    |
+| misc/fps                | 3.92e+03 |
+| misc/nupdates           | 400      |
+| misc/policy_entropy     | 2.19     |
+| misc/policy_loss        | -12.5    |
+| misc/serial_timesteps   | 5e+04    |
+| misc/time_elapsed       | 200      |
+| misc/total_timesteps    | 8e+05    |
+| misc/value_loss         | 138      |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.0116  |
+| stats/eprewmean         | -1.86    |
+| stats/eprewmin          | -7.28    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0105   |
+| misc/clipfrac           | 0.085    |
+| misc/explained_variance | 0.976    |
+| misc/fps                | 3.88e+03 |
+| misc/nupdates           | 450      |
+| misc/policy_entropy     | 1.85     |
+| misc/policy_loss        | -2.83    |
+| misc/serial_timesteps   | 5.62e+04 |
+| misc/time_elapsed       | 225      |
+| misc/total_timesteps    | 9e+05    |
+| misc/value_loss         | 22       |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00689 |
+| stats/eprewmean         | -1.32    |
+| stats/eprewmin          | -3.9     |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.041    |
+| misc/clipfrac           | 0.366    |
+| misc/explained_variance | 0.96     |
+| misc/fps                | 3.95e+03 |
+| misc/nupdates           | 500      |
+| misc/policy_entropy     | 1.84     |
+| misc/policy_loss        | 1.48     |
+| misc/serial_timesteps   | 6.25e+04 |
+| misc/time_elapsed       | 250      |
+| misc/total_timesteps    | 1e+06    |
+| misc/value_loss         | 45.4     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00627 |
+| stats/eprewmean         | -1.4     |
+| stats/eprewmin          | -6.32    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0216   |
+| misc/clipfrac           | 0.226    |
+| misc/explained_variance | 0.998    |
+| misc/fps                | 3.97e+03 |
+| misc/nupdates           | 550      |
+| misc/policy_entropy     | 1.86     |
+| misc/policy_loss        | -0.1     |
+| misc/serial_timesteps   | 6.88e+04 |
+| misc/time_elapsed       | 275      |
+| misc/total_timesteps    | 1.1e+06  |
+| misc/value_loss         | 1.9      |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00625 |
+| stats/eprewmean         | -1.31    |
+| stats/eprewmin          | -5.24    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0141   |
+| misc/clipfrac           | 0.0621   |
+| misc/explained_variance | 0.993    |
+| misc/fps                | 3.94e+03 |
+| misc/nupdates           | 600      |
+| misc/policy_entropy     | 2.1      |
+| misc/policy_loss        | 0.675    |
+| misc/serial_timesteps   | 7.5e+04  |
+| misc/time_elapsed       | 300      |
+| misc/total_timesteps    | 1.2e+06  |
+| misc/value_loss         | 11.8     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.0075  |
+| stats/eprewmean         | -1.75    |
+| stats/eprewmin          | -7.49    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0178   |
+| misc/clipfrac           | 0.131    |
+| misc/explained_variance | 0.973    |
+| misc/fps                | 3.93e+03 |
+| misc/nupdates           | 650      |
+| misc/policy_entropy     | 2.15     |
+| misc/policy_loss        | 1.35     |
+| misc/serial_timesteps   | 8.12e+04 |
+| misc/time_elapsed       | 325      |
+| misc/total_timesteps    | 1.3e+06  |
+| misc/value_loss         | 46.5     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00773 |
+| stats/eprewmean         | -1.33    |
+| stats/eprewmin          | -5.86    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0609   |
+| misc/clipfrac           | 0.318    |
+| misc/explained_variance | 0.967    |
+| misc/fps                | 3.92e+03 |
+| misc/nupdates           | 700      |
+| misc/policy_entropy     | 2.22     |
+| misc/policy_loss        | 0.864    |
+| misc/serial_timesteps   | 8.75e+04 |
+| misc/time_elapsed       | 350      |
+| misc/total_timesteps    | 1.4e+06  |
+| misc/value_loss         | 33.2     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00724 |
+| stats/eprewmean         | -1.27    |
+| stats/eprewmin          | -4.08    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0563   |
+| misc/clipfrac           | 0.365    |
+| misc/explained_variance | 0.981    |
+| misc/fps                | 4.1e+03  |
+| misc/nupdates           | 750      |
+| misc/policy_entropy     | 2.26     |
+| misc/policy_loss        | 0.67     |
+| misc/serial_timesteps   | 9.38e+04 |
+| misc/time_elapsed       | 375      |
+| misc/total_timesteps    | 1.5e+06  |
+| misc/value_loss         | 29.1     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00662 |
+| stats/eprewmean         | -1.24    |
+| stats/eprewmin          | -4.1     |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0109   |
+| misc/clipfrac           | 0.121    |
+| misc/explained_variance | 0.96     |
+| misc/fps                | 4.08e+03 |
+| misc/nupdates           | 800      |
+| misc/policy_entropy     | 2.14     |
+| misc/policy_loss        | 2.15     |
+| misc/serial_timesteps   | 1e+05    |
+| misc/time_elapsed       | 400      |
+| misc/total_timesteps    | 1.6e+06  |
+| misc/value_loss         | 46.9     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00667 |
+| stats/eprewmean         | -1.2     |
+| stats/eprewmin          | -3.89    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0283   |
+| misc/clipfrac           | 0.226    |
+| misc/explained_variance | 0.98     |
+| misc/fps                | 4.05e+03 |
+| misc/nupdates           | 850      |
+| misc/policy_entropy     | 2.32     |
+| misc/policy_loss        | 0.271    |
+| misc/serial_timesteps   | 1.06e+05 |
+| misc/time_elapsed       | 425      |
+| misc/total_timesteps    | 1.7e+06  |
+| misc/value_loss         | 25.2     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00657 |
+| stats/eprewmean         | -1.41    |
+| stats/eprewmin          | -7.53    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0283   |
+| misc/clipfrac           | 0.255    |
+| misc/explained_variance | 0.988    |
+| misc/fps                | 3.89e+03 |
+| misc/nupdates           | 900      |
+| misc/policy_entropy     | 2.38     |
+| misc/policy_loss        | 0.413    |
+| misc/serial_timesteps   | 1.12e+05 |
+| misc/time_elapsed       | 450      |
+| misc/total_timesteps    | 1.8e+06  |
+| misc/value_loss         | 15.2     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00693 |
+| stats/eprewmean         | -1.26    |
+| stats/eprewmin          | -6.05    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0318   |
+| misc/clipfrac           | 0.164    |
+| misc/explained_variance | 0.95     |
+| misc/fps                | 4.16e+03 |
+| misc/nupdates           | 950      |
+| misc/policy_entropy     | 2.43     |
+| misc/policy_loss        | 1.83     |
+| misc/serial_timesteps   | 1.19e+05 |
+| misc/time_elapsed       | 475      |
+| misc/total_timesteps    | 1.9e+06  |
+| misc/value_loss         | 56.7     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00668 |
+| stats/eprewmean         | -1.25    |
+| stats/eprewmin          | -4.4     |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0339   |
+| misc/clipfrac           | 0.291    |
+| misc/explained_variance | 0.97     |
+| misc/fps                | 4.01e+03 |
+| misc/nupdates           | 1e+03    |
+| misc/policy_entropy     | 2.63     |
+| misc/policy_loss        | -0.178   |
+| misc/serial_timesteps   | 1.25e+05 |
+| misc/time_elapsed       | 500      |
+| misc/total_timesteps    | 2e+06    |
+| misc/value_loss         | 36.9     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00685 |
+| stats/eprewmean         | -1.42    |
+| stats/eprewmin          | -8.05    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.015    |
+| misc/clipfrac           | 0.126    |
+| misc/explained_variance | 0.978    |
+| misc/fps                | 3.94e+03 |
+| misc/nupdates           | 1.05e+03 |
+| misc/policy_entropy     | 2.44     |
+| misc/policy_loss        | 0.595    |
+| misc/serial_timesteps   | 1.31e+05 |
+| misc/time_elapsed       | 525      |
+| misc/total_timesteps    | 2.1e+06  |
+| misc/value_loss         | 22.3     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00723 |
+| stats/eprewmean         | -1.24    |
+| stats/eprewmin          | -5.61    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0866   |
+| misc/clipfrac           | 0.352    |
+| misc/explained_variance | 0.975    |
+| misc/fps                | 4.00e+03 |
+| misc/nupdates           | 1.1e+03  |
+| misc/policy_entropy     | 2.49     |
+| misc/policy_loss        | -0.064   |
+| misc/serial_timesteps   | 1.38e+05 |
+| misc/time_elapsed       | 551      |
+| misc/total_timesteps    | 2.2e+06  |
+| misc/value_loss         | 23.8     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00654 |
+| stats/eprewmean         | -1.22    |
+| stats/eprewmin          | -4.05    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0165   |
+| misc/clipfrac           | 0.144    |
+| misc/explained_variance | 0.992    |
+| misc/fps                | 4.16e+03 |
+| misc/nupdates           | 1.15e+03 |
+| misc/policy_entropy     | 2.42     |
+| misc/policy_loss        | -0.409   |
+| misc/serial_timesteps   | 1.44e+05 |
+| misc/time_elapsed       | 576      |
+| misc/total_timesteps    | 2.3e+06  |
+| misc/value_loss         | 5.65     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.0074  |
+| stats/eprewmean         | -1.31    |
+| stats/eprewmin          | -5       |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0302   |
+| misc/clipfrac           | 0.193    |
+| misc/explained_variance | 0.995    |
+| misc/fps                | 4.02e+03 |
+| misc/nupdates           | 1.2e+03  |
+| misc/policy_entropy     | 2.42     |
+| misc/policy_loss        | -0.00744 |
+| misc/serial_timesteps   | 1.5e+05  |
+| misc/time_elapsed       | 601      |
+| misc/total_timesteps    | 2.4e+06  |
+| misc/value_loss         | 3.92     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00724 |
+| stats/eprewmean         | -1.26    |
+| stats/eprewmin          | -4.76    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0199   |
+| misc/clipfrac           | 0.199    |
+| misc/explained_variance | 0.995    |
+| misc/fps                | 4.09e+03 |
+| misc/nupdates           | 1.25e+03 |
+| misc/policy_entropy     | 2.34     |
+| misc/policy_loss        | -0.0328  |
+| misc/serial_timesteps   | 1.56e+05 |
+| misc/time_elapsed       | 626      |
+| misc/total_timesteps    | 2.5e+06  |
+| misc/value_loss         | 5.79     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00659 |
+| stats/eprewmean         | -1.25    |
+| stats/eprewmin          | -4.96    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0177   |
+| misc/clipfrac           | 0.12     |
+| misc/explained_variance | 0.991    |
+| misc/fps                | 4e+03    |
+| misc/nupdates           | 1.3e+03  |
+| misc/policy_entropy     | 2.4      |
+| misc/policy_loss        | 0.199    |
+| misc/serial_timesteps   | 1.62e+05 |
+| misc/time_elapsed       | 651      |
+| misc/total_timesteps    | 2.6e+06  |
+| misc/value_loss         | 8.53     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00699 |
+| stats/eprewmean         | -1.21    |
+| stats/eprewmin          | -3.45    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0289   |
+| misc/clipfrac           | 0.189    |
+| misc/explained_variance | 0.98     |
+| misc/fps                | 4.13e+03 |
+| misc/nupdates           | 1.35e+03 |
+| misc/policy_entropy     | 2.4      |
+| misc/policy_loss        | 0.491    |
+| misc/serial_timesteps   | 1.69e+05 |
+| misc/time_elapsed       | 676      |
+| misc/total_timesteps    | 2.7e+06  |
+| misc/value_loss         | 20.5     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.0064  |
+| stats/eprewmean         | -1.25    |
+| stats/eprewmin          | -4.77    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0233   |
+| misc/clipfrac           | 0.151    |
+| misc/explained_variance | 0.985    |
+| misc/fps                | 3.94e+03 |
+| misc/nupdates           | 1.4e+03  |
+| misc/policy_entropy     | 2.38     |
+| misc/policy_loss        | -0.755   |
+| misc/serial_timesteps   | 1.75e+05 |
+| misc/time_elapsed       | 701      |
+| misc/total_timesteps    | 2.8e+06  |
+| misc/value_loss         | 18.5     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00645 |
+| stats/eprewmean         | -1.19    |
+| stats/eprewmin          | -3.49    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0224   |
+| misc/clipfrac           | 0.155    |
+| misc/explained_variance | 0.991    |
+| misc/fps                | 4.02e+03 |
+| misc/nupdates           | 1.45e+03 |
+| misc/policy_entropy     | 2.37     |
+| misc/policy_loss        | -0.614   |
+| misc/serial_timesteps   | 1.81e+05 |
+| misc/time_elapsed       | 726      |
+| misc/total_timesteps    | 2.9e+06  |
+| misc/value_loss         | 9.03     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00709 |
+| stats/eprewmean         | -1.22    |
+| stats/eprewmin          | -4.06    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.211    |
+| misc/clipfrac           | 0.356    |
+| misc/explained_variance | 0.994    |
+| misc/fps                | 3.94e+03 |
+| misc/nupdates           | 1.5e+03  |
+| misc/policy_entropy     | 2.38     |
+| misc/policy_loss        | -0.439   |
+| misc/serial_timesteps   | 1.88e+05 |
+| misc/time_elapsed       | 751      |
+| misc/total_timesteps    | 3e+06    |
+| misc/value_loss         | 8.13     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00683 |
+| stats/eprewmean         | -1.3     |
+| stats/eprewmin          | -7.06    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0244   |
+| misc/clipfrac           | 0.19     |
+| misc/explained_variance | 0.972    |
+| misc/fps                | 4.12e+03 |
+| misc/nupdates           | 1.55e+03 |
+| misc/policy_entropy     | 2.28     |
+| misc/policy_loss        | -0.96    |
+| misc/serial_timesteps   | 1.94e+05 |
+| misc/time_elapsed       | 776      |
+| misc/total_timesteps    | 3.1e+06  |
+| misc/value_loss         | 20.7     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00635 |
+| stats/eprewmean         | -1.19    |
+| stats/eprewmin          | -3.7     |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.031    |
+| misc/clipfrac           | 0.245    |
+| misc/explained_variance | 0.997    |
+| misc/fps                | 3.92e+03 |
+| misc/nupdates           | 1.6e+03  |
+| misc/policy_entropy     | 2.31     |
+| misc/policy_loss        | 0.129    |
+| misc/serial_timesteps   | 2e+05    |
+| misc/time_elapsed       | 801      |
+| misc/total_timesteps    | 3.2e+06  |
+| misc/value_loss         | 3.14     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00621 |
+| stats/eprewmean         | -1.2     |
+| stats/eprewmin          | -3.12    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0178   |
+| misc/clipfrac           | 0.107    |
+| misc/explained_variance | 0.994    |
+| misc/fps                | 3.99e+03 |
+| misc/nupdates           | 1.65e+03 |
+| misc/policy_entropy     | 2.3      |
+| misc/policy_loss        | 0.224    |
+| misc/serial_timesteps   | 2.06e+05 |
+| misc/time_elapsed       | 826      |
+| misc/total_timesteps    | 3.3e+06  |
+| misc/value_loss         | 4.02     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00622 |
+| stats/eprewmean         | -1.22    |
+| stats/eprewmin          | -4.52    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0771   |
+| misc/clipfrac           | 0.222    |
+| misc/explained_variance | 0.995    |
+| misc/fps                | 3.99e+03 |
+| misc/nupdates           | 1.7e+03  |
+| misc/policy_entropy     | 2.23     |
+| misc/policy_loss        | 0.118    |
+| misc/serial_timesteps   | 2.12e+05 |
+| misc/time_elapsed       | 851      |
+| misc/total_timesteps    | 3.4e+06  |
+| misc/value_loss         | 4.08     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00657 |
+| stats/eprewmean         | -1.2     |
+| stats/eprewmin          | -4.01    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0988   |
+| misc/clipfrac           | 0.395    |
+| misc/explained_variance | 0.968    |
+| misc/fps                | 4.16e+03 |
+| misc/nupdates           | 1.75e+03 |
+| misc/policy_entropy     | 2.3      |
+| misc/policy_loss        | 1.29     |
+| misc/serial_timesteps   | 2.19e+05 |
+| misc/time_elapsed       | 876      |
+| misc/total_timesteps    | 3.5e+06  |
+| misc/value_loss         | 41       |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00629 |
+| stats/eprewmean         | -1.28    |
+| stats/eprewmin          | -5.2     |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0179   |
+| misc/clipfrac           | 0.138    |
+| misc/explained_variance | 0.982    |
+| misc/fps                | 4.02e+03 |
+| misc/nupdates           | 1.8e+03  |
+| misc/policy_entropy     | 2.29     |
+| misc/policy_loss        | 0.48     |
+| misc/serial_timesteps   | 2.25e+05 |
+| misc/time_elapsed       | 901      |
+| misc/total_timesteps    | 3.6e+06  |
+| misc/value_loss         | 26.6     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00656 |
+| stats/eprewmean         | -1.46    |
+| stats/eprewmin          | -6.55    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0473   |
+| misc/clipfrac           | 0.208    |
+| misc/explained_variance | 0.983    |
+| misc/fps                | 4e+03    |
+| misc/nupdates           | 1.85e+03 |
+| misc/policy_entropy     | 2.22     |
+| misc/policy_loss        | 0.506    |
+| misc/serial_timesteps   | 2.31e+05 |
+| misc/time_elapsed       | 926      |
+| misc/total_timesteps    | 3.7e+06  |
+| misc/value_loss         | 15.3     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00588 |
+| stats/eprewmean         | -1.17    |
+| stats/eprewmin          | -4.08    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0897   |
+| misc/clipfrac           | 0.318    |
+| misc/explained_variance | 0.942    |
+| misc/fps                | 3.88e+03 |
+| misc/nupdates           | 1.9e+03  |
+| misc/policy_entropy     | 2.28     |
+| misc/policy_loss        | 2.25     |
+| misc/serial_timesteps   | 2.38e+05 |
+| misc/time_elapsed       | 951      |
+| misc/total_timesteps    | 3.8e+06  |
+| misc/value_loss         | 71.2     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00602 |
+| stats/eprewmean         | -1.28    |
+| stats/eprewmin          | -3.87    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0136   |
+| misc/clipfrac           | 0.0835   |
+| misc/explained_variance | 0.997    |
+| misc/fps                | 4.09e+03 |
+| misc/nupdates           | 1.95e+03 |
+| misc/policy_entropy     | 2.36     |
+| misc/policy_loss        | 0.246    |
+| misc/serial_timesteps   | 2.44e+05 |
+| misc/time_elapsed       | 976      |
+| misc/total_timesteps    | 3.9e+06  |
+| misc/value_loss         | 7.81     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00809 |
+| stats/eprewmean         | -1.46    |
+| stats/eprewmin          | -5.71    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0201   |
+| misc/clipfrac           | 0.161    |
+| misc/explained_variance | 0.975    |
+| misc/fps                | 3.98e+03 |
+| misc/nupdates           | 2e+03    |
+| misc/policy_entropy     | 2.18     |
+| misc/policy_loss        | -0.693   |
+| misc/serial_timesteps   | 2.5e+05  |
+| misc/time_elapsed       | 1e+03    |
+| misc/total_timesteps    | 4e+06    |
+| misc/value_loss         | 19.8     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00679 |
+| stats/eprewmean         | -1.34    |
+| stats/eprewmin          | -4.75    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0696   |
+| misc/clipfrac           | 0.276    |
+| misc/explained_variance | 0.971    |
+| misc/fps                | 3.98e+03 |
+| misc/nupdates           | 2.05e+03 |
+| misc/policy_entropy     | 2.15     |
+| misc/policy_loss        | 0.299    |
+| misc/serial_timesteps   | 2.56e+05 |
+| misc/time_elapsed       | 1.03e+03 |
+| misc/total_timesteps    | 4.1e+06  |
+| misc/value_loss         | 26.5     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00629 |
+| stats/eprewmean         | -1.22    |
+| stats/eprewmin          | -2.96    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0555   |
+| misc/clipfrac           | 0.303    |
+| misc/explained_variance | 0.969    |
+| misc/fps                | 3.96e+03 |
+| misc/nupdates           | 2.1e+03  |
+| misc/policy_entropy     | 2.06     |
+| misc/policy_loss        | 0.625    |
+| misc/serial_timesteps   | 2.62e+05 |
+| misc/time_elapsed       | 1.05e+03 |
+| misc/total_timesteps    | 4.2e+06  |
+| misc/value_loss         | 18.2     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00563 |
+| stats/eprewmean         | -1.17    |
+| stats/eprewmin          | -3.1     |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0175   |
+| misc/clipfrac           | 0.131    |
+| misc/explained_variance | 0.992    |
+| misc/fps                | 4e+03    |
+| misc/nupdates           | 2.15e+03 |
+| misc/policy_entropy     | 2.12     |
+| misc/policy_loss        | 0.0829   |
+| misc/serial_timesteps   | 2.69e+05 |
+| misc/time_elapsed       | 1.08e+03 |
+| misc/total_timesteps    | 4.3e+06  |
+| misc/value_loss         | 8.71     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00654 |
+| stats/eprewmean         | -1.23    |
+| stats/eprewmin          | -3.65    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0866   |
+| misc/clipfrac           | 0.279    |
+| misc/explained_variance | 0.975    |
+| misc/fps                | 3.99e+03 |
+| misc/nupdates           | 2.2e+03  |
+| misc/policy_entropy     | 1.94     |
+| misc/policy_loss        | -0.0749  |
+| misc/serial_timesteps   | 2.75e+05 |
+| misc/time_elapsed       | 1.1e+03  |
+| misc/total_timesteps    | 4.4e+06  |
+| misc/value_loss         | 34       |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00589 |
+| stats/eprewmean         | -1.21    |
+| stats/eprewmin          | -3.33    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.492    |
+| misc/clipfrac           | 0.231    |
+| misc/explained_variance | 0.995    |
+| misc/fps                | 3.94e+03 |
+| misc/nupdates           | 2.25e+03 |
+| misc/policy_entropy     | 1.95     |
+| misc/policy_loss        | -0.0227  |
+| misc/serial_timesteps   | 2.81e+05 |
+| misc/time_elapsed       | 1.13e+03 |
+| misc/total_timesteps    | 4.5e+06  |
+| misc/value_loss         | 8.11     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00606 |
+| stats/eprewmean         | -1.23    |
+| stats/eprewmin          | -5.08    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.147    |
+| misc/clipfrac           | 0.311    |
+| misc/explained_variance | 0.938    |
+| misc/fps                | 3.98e+03 |
+| misc/nupdates           | 2.3e+03  |
+| misc/policy_entropy     | 1.89     |
+| misc/policy_loss        | 4.24     |
+| misc/serial_timesteps   | 2.88e+05 |
+| misc/time_elapsed       | 1.15e+03 |
+| misc/total_timesteps    | 4.6e+06  |
+| misc/value_loss         | 116      |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00627 |
+| stats/eprewmean         | -1.24    |
+| stats/eprewmin          | -4.02    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0482   |
+| misc/clipfrac           | 0.193    |
+| misc/explained_variance | 0.989    |
+| misc/fps                | 3.94e+03 |
+| misc/nupdates           | 2.35e+03 |
+| misc/policy_entropy     | 1.9      |
+| misc/policy_loss        | -0.37    |
+| misc/serial_timesteps   | 2.94e+05 |
+| misc/time_elapsed       | 1.18e+03 |
+| misc/total_timesteps    | 4.7e+06  |
+| misc/value_loss         | 10.7     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00547 |
+| stats/eprewmean         | -1.29    |
+| stats/eprewmin          | -5.16    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.189    |
+| misc/clipfrac           | 0.402    |
+| misc/explained_variance | 0.99     |
+| misc/fps                | 3.96e+03 |
+| misc/nupdates           | 2.4e+03  |
+| misc/policy_entropy     | 1.81     |
+| misc/policy_loss        | 0.388    |
+| misc/serial_timesteps   | 3e+05    |
+| misc/time_elapsed       | 1.2e+03  |
+| misc/total_timesteps    | 4.8e+06  |
+| misc/value_loss         | 12.7     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00572 |
+| stats/eprewmean         | -1.25    |
+| stats/eprewmin          | -4.69    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.111    |
+| misc/clipfrac           | 0.363    |
+| misc/explained_variance | 0.978    |
+| misc/fps                | 3.98e+03 |
+| misc/nupdates           | 2.45e+03 |
+| misc/policy_entropy     | 1.82     |
+| misc/policy_loss        | -0.00135 |
+| misc/serial_timesteps   | 3.06e+05 |
+| misc/time_elapsed       | 1.23e+03 |
+| misc/total_timesteps    | 4.9e+06  |
+| misc/value_loss         | 23.1     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00512 |
+| stats/eprewmean         | -1.19    |
+| stats/eprewmin          | -3.68    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0329   |
+| misc/clipfrac           | 0.264    |
+| misc/explained_variance | 0.982    |
+| misc/fps                | 4.01e+03 |
+| misc/nupdates           | 2.5e+03  |
+| misc/policy_entropy     | 1.96     |
+| misc/policy_loss        | 0.296    |
+| misc/serial_timesteps   | 3.12e+05 |
+| misc/time_elapsed       | 1.25e+03 |
+| misc/total_timesteps    | 5e+06    |
+| misc/value_loss         | 25.3     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00639 |
+| stats/eprewmean         | -1.26    |
+| stats/eprewmin          | -5.32    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.046    |
+| misc/clipfrac           | 0.185    |
+| misc/explained_variance | 0.978    |
+| misc/fps                | 3.90e+03 |
+| misc/nupdates           | 2.55e+03 |
+| misc/policy_entropy     | 1.94     |
+| misc/policy_loss        | 0.861    |
+| misc/serial_timesteps   | 3.19e+05 |
+| misc/time_elapsed       | 1.28e+03 |
+| misc/total_timesteps    | 5.1e+06  |
+| misc/value_loss         | 23.1     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.0057  |
+| stats/eprewmean         | -1.24    |
+| stats/eprewmin          | -3.78    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0146   |
+| misc/clipfrac           | 0.119    |
+| misc/explained_variance | 1        |
+| misc/fps                | 4.03e+03 |
+| misc/nupdates           | 2.6e+03  |
+| misc/policy_entropy     | 1.98     |
+| misc/policy_loss        | -0.0618  |
+| misc/serial_timesteps   | 3.25e+05 |
+| misc/time_elapsed       | 1.3e+03  |
+| misc/total_timesteps    | 5.2e+06  |
+| misc/value_loss         | 0.334    |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00576 |
+| stats/eprewmean         | -1.23    |
+| stats/eprewmin          | -4.88    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0756   |
+| misc/clipfrac           | 0.224    |
+| misc/explained_variance | 0.997    |
+| misc/fps                | 3.91e+03 |
+| misc/nupdates           | 2.65e+03 |
+| misc/policy_entropy     | 1.9      |
+| misc/policy_loss        | 0.13     |
+| misc/serial_timesteps   | 3.31e+05 |
+| misc/time_elapsed       | 1.33e+03 |
+| misc/total_timesteps    | 5.3e+06  |
+| misc/value_loss         | 2.52     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00591 |
+| stats/eprewmean         | -1.23    |
+| stats/eprewmin          | -3.94    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.238    |
+| misc/clipfrac           | 0.372    |
+| misc/explained_variance | 0.955    |
+| misc/fps                | 4.06e+03 |
+| misc/nupdates           | 2.7e+03  |
+| misc/policy_entropy     | 1.84     |
+| misc/policy_loss        | 1.79     |
+| misc/serial_timesteps   | 3.38e+05 |
+| misc/time_elapsed       | 1.35e+03 |
+| misc/total_timesteps    | 5.4e+06  |
+| misc/value_loss         | 57.5     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.0064  |
+| stats/eprewmean         | -1.19    |
+| stats/eprewmin          | -3.05    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.207    |
+| misc/clipfrac           | 0.399    |
+| misc/explained_variance | 0.981    |
+| misc/fps                | 3.91e+03 |
+| misc/nupdates           | 2.75e+03 |
+| misc/policy_entropy     | 1.85     |
+| misc/policy_loss        | 0.949    |
+| misc/serial_timesteps   | 3.44e+05 |
+| misc/time_elapsed       | 1.38e+03 |
+| misc/total_timesteps    | 5.5e+06  |
+| misc/value_loss         | 22.8     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00585 |
+| stats/eprewmean         | -1.24    |
+| stats/eprewmin          | -3.54    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0725   |
+| misc/clipfrac           | 0.294    |
+| misc/explained_variance | 0.995    |
+| misc/fps                | 4e+03    |
+| misc/nupdates           | 2.8e+03  |
+| misc/policy_entropy     | 1.86     |
+| misc/policy_loss        | -0.354   |
+| misc/serial_timesteps   | 3.5e+05  |
+| misc/time_elapsed       | 1.4e+03  |
+| misc/total_timesteps    | 5.6e+06  |
+| misc/value_loss         | 5.63     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00577 |
+| stats/eprewmean         | -1.21    |
+| stats/eprewmin          | -3.62    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.019    |
+| misc/clipfrac           | 0.106    |
+| misc/explained_variance | 0.999    |
+| misc/fps                | 3.82e+03 |
+| misc/nupdates           | 2.85e+03 |
+| misc/policy_entropy     | 1.89     |
+| misc/policy_loss        | -0.144   |
+| misc/serial_timesteps   | 3.56e+05 |
+| misc/time_elapsed       | 1.43e+03 |
+| misc/total_timesteps    | 5.7e+06  |
+| misc/value_loss         | 0.981    |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00539 |
+| stats/eprewmean         | -1.2     |
+| stats/eprewmin          | -3.96    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0204   |
+| misc/clipfrac           | 0.168    |
+| misc/explained_variance | 0.999    |
+| misc/fps                | 4.12e+03 |
+| misc/nupdates           | 2.9e+03  |
+| misc/policy_entropy     | 1.83     |
+| misc/policy_loss        | -0.155   |
+| misc/serial_timesteps   | 3.62e+05 |
+| misc/time_elapsed       | 1.45e+03 |
+| misc/total_timesteps    | 5.8e+06  |
+| misc/value_loss         | 0.641    |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.0056  |
+| stats/eprewmean         | -1.21    |
+| stats/eprewmin          | -3.57    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0763   |
+| misc/clipfrac           | 0.254    |
+| misc/explained_variance | 0.981    |
+| misc/fps                | 3.93e+03 |
+| misc/nupdates           | 2.95e+03 |
+| misc/policy_entropy     | 1.74     |
+| misc/policy_loss        | -0.614   |
+| misc/serial_timesteps   | 3.69e+05 |
+| misc/time_elapsed       | 1.48e+03 |
+| misc/total_timesteps    | 5.9e+06  |
+| misc/value_loss         | 13.1     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00538 |
+| stats/eprewmean         | -1.18    |
+| stats/eprewmin          | -3.25    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0443   |
+| misc/clipfrac           | 0.225    |
+| misc/explained_variance | 0.996    |
+| misc/fps                | 3.89e+03 |
+| misc/nupdates           | 3e+03    |
+| misc/policy_entropy     | 1.66     |
+| misc/policy_loss        | -0.14    |
+| misc/serial_timesteps   | 3.75e+05 |
+| misc/time_elapsed       | 1.5e+03  |
+| misc/total_timesteps    | 6e+06    |
+| misc/value_loss         | 3.34     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00495 |
+| stats/eprewmean         | -1.21    |
+| stats/eprewmin          | -3.97    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.103    |
+| misc/clipfrac           | 0.241    |
+| misc/explained_variance | 0.999    |
+| misc/fps                | 3.90e+03 |
+| misc/nupdates           | 3.05e+03 |
+| misc/policy_entropy     | 1.66     |
+| misc/policy_loss        | -0.0188  |
+| misc/serial_timesteps   | 3.81e+05 |
+| misc/time_elapsed       | 1.53e+03 |
+| misc/total_timesteps    | 6.1e+06  |
+| misc/value_loss         | 1.24     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00638 |
+| stats/eprewmean         | -1.22    |
+| stats/eprewmin          | -5.07    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0253   |
+| misc/clipfrac           | 0.151    |
+| misc/explained_variance | 0.984    |
+| misc/fps                | 4.07e+03 |
+| misc/nupdates           | 3.1e+03  |
+| misc/policy_entropy     | 1.58     |
+| misc/policy_loss        | -0.2     |
+| misc/serial_timesteps   | 3.88e+05 |
+| misc/time_elapsed       | 1.55e+03 |
+| misc/total_timesteps    | 6.2e+06  |
+| misc/value_loss         | 18.8     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.0057  |
+| stats/eprewmean         | -1.3     |
+| stats/eprewmin          | -3.77    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.439    |
+| misc/clipfrac           | 0.609    |
+| misc/explained_variance | 0.987    |
+| misc/fps                | 3.8e+03  |
+| misc/nupdates           | 3.15e+03 |
+| misc/policy_entropy     | 1.56     |
+| misc/policy_loss        | 0.767    |
+| misc/serial_timesteps   | 3.94e+05 |
+| misc/time_elapsed       | 1.58e+03 |
+| misc/total_timesteps    | 6.3e+06  |
+| misc/value_loss         | 19.9     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00434 |
+| stats/eprewmean         | -1.19    |
+| stats/eprewmin          | -3.72    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.167    |
+| misc/clipfrac           | 0.481    |
+| misc/explained_variance | 0.988    |
+| misc/fps                | 4.06e+03 |
+| misc/nupdates           | 3.2e+03  |
+| misc/policy_entropy     | 1.55     |
+| misc/policy_loss        | 0.129    |
+| misc/serial_timesteps   | 4e+05    |
+| misc/time_elapsed       | 1.6e+03  |
+| misc/total_timesteps    | 6.4e+06  |
+| misc/value_loss         | 20.5     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.0049  |
+| stats/eprewmean         | -1.19    |
+| stats/eprewmin          | -3.96    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0267   |
+| misc/clipfrac           | 0.211    |
+| misc/explained_variance | 0.961    |
+| misc/fps                | 3.94e+03 |
+| misc/nupdates           | 3.25e+03 |
+| misc/policy_entropy     | 1.79     |
+| misc/policy_loss        | 4.39     |
+| misc/serial_timesteps   | 4.06e+05 |
+| misc/time_elapsed       | 1.63e+03 |
+| misc/total_timesteps    | 6.5e+06  |
+| misc/value_loss         | 157      |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00454 |
+| stats/eprewmean         | -1.3     |
+| stats/eprewmin          | -7.55    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0109   |
+| misc/clipfrac           | 0.112    |
+| misc/explained_variance | 0.978    |
+| misc/fps                | 4.21e+03 |
+| misc/nupdates           | 3.3e+03  |
+| misc/policy_entropy     | 2.37     |
+| misc/policy_loss        | 3.53     |
+| misc/serial_timesteps   | 4.12e+05 |
+| misc/time_elapsed       | 1.65e+03 |
+| misc/total_timesteps    | 6.6e+06  |
+| misc/value_loss         | 116      |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.0124  |
+| stats/eprewmean         | -1.8     |
+| stats/eprewmin          | -7.64    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0163   |
+| misc/clipfrac           | 0.159    |
+| misc/explained_variance | 0.984    |
+| misc/fps                | 3.93e+03 |
+| misc/nupdates           | 3.35e+03 |
+| misc/policy_entropy     | 2.67     |
+| misc/policy_loss        | 12.5     |
+| misc/serial_timesteps   | 4.19e+05 |
+| misc/time_elapsed       | 1.68e+03 |
+| misc/total_timesteps    | 6.7e+06  |
+| misc/value_loss         | 364      |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00941 |
+| stats/eprewmean         | -1.95    |
+| stats/eprewmin          | -7.67    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0149   |
+| misc/clipfrac           | 0.135    |
+| misc/explained_variance | 0.992    |
+| misc/fps                | 3.93e+03 |
+| misc/nupdates           | 3.4e+03  |
+| misc/policy_entropy     | 2.85     |
+| misc/policy_loss        | -0.0474  |
+| misc/serial_timesteps   | 4.25e+05 |
+| misc/time_elapsed       | 1.7e+03  |
+| misc/total_timesteps    | 6.8e+06  |
+| misc/value_loss         | 7.2      |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00772 |
+| stats/eprewmean         | -1.78    |
+| stats/eprewmin          | -7.64    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.00805  |
+| misc/clipfrac           | 0.0922   |
+| misc/explained_variance | 0.984    |
+| misc/fps                | 3.94e+03 |
+| misc/nupdates           | 3.45e+03 |
+| misc/policy_entropy     | 2.97     |
+| misc/policy_loss        | 6.27     |
+| misc/serial_timesteps   | 4.31e+05 |
+| misc/time_elapsed       | 1.73e+03 |
+| misc/total_timesteps    | 6.9e+06  |
+| misc/value_loss         | 224      |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00688 |
+| stats/eprewmean         | -1.54    |
+| stats/eprewmin          | -7.64    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0139   |
+| misc/clipfrac           | 0.129    |
+| misc/explained_variance | 0.978    |
+| misc/fps                | 4.16e+03 |
+| misc/nupdates           | 3.5e+03  |
+| misc/policy_entropy     | 3.14     |
+| misc/policy_loss        | -0.786   |
+| misc/serial_timesteps   | 4.38e+05 |
+| misc/time_elapsed       | 1.75e+03 |
+| misc/total_timesteps    | 7e+06    |
+| misc/value_loss         | 100      |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00799 |
+| stats/eprewmean         | -1.78    |
+| stats/eprewmin          | -7.69    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0101   |
+| misc/clipfrac           | 0.0875   |
+| misc/explained_variance | 0.991    |
+| misc/fps                | 3.4e+03  |
+| misc/nupdates           | 3.55e+03 |
+| misc/policy_entropy     | 3.01     |
+| misc/policy_loss        | 0.314    |
+| misc/serial_timesteps   | 4.44e+05 |
+| misc/time_elapsed       | 1.78e+03 |
+| misc/total_timesteps    | 7.1e+06  |
+| misc/value_loss         | 7.73     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.008   |
+| stats/eprewmean         | -1.37    |
+| stats/eprewmin          | -7.59    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.00993  |
+| misc/clipfrac           | 0.0901   |
+| misc/explained_variance | 0.994    |
+| misc/fps                | 4.07e+03 |
+| misc/nupdates           | 3.6e+03  |
+| misc/policy_entropy     | 2.91     |
+| misc/policy_loss        | -0.144   |
+| misc/serial_timesteps   | 4.5e+05  |
+| misc/time_elapsed       | 1.8e+03  |
+| misc/total_timesteps    | 7.2e+06  |
+| misc/value_loss         | 2.35     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00716 |
+| stats/eprewmean         | -1.19    |
+| stats/eprewmin          | -3.44    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0191   |
+| misc/clipfrac           | 0.178    |
+| misc/explained_variance | 0.989    |
+| misc/fps                | 3.98e+03 |
+| misc/nupdates           | 3.65e+03 |
+| misc/policy_entropy     | 2.82     |
+| misc/policy_loss        | -0.389   |
+| misc/serial_timesteps   | 4.56e+05 |
+| misc/time_elapsed       | 1.83e+03 |
+| misc/total_timesteps    | 7.3e+06  |
+| misc/value_loss         | 12.2     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00706 |
+| stats/eprewmean         | -1.21    |
+| stats/eprewmin          | -4.15    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0166   |
+| misc/clipfrac           | 0.0915   |
+| misc/explained_variance | 0.994    |
+| misc/fps                | 4.13e+03 |
+| misc/nupdates           | 3.7e+03  |
+| misc/policy_entropy     | 2.83     |
+| misc/policy_loss        | 0.122    |
+| misc/serial_timesteps   | 4.62e+05 |
+| misc/time_elapsed       | 1.85e+03 |
+| misc/total_timesteps    | 7.4e+06  |
+| misc/value_loss         | 4.52     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.0074  |
+| stats/eprewmean         | -1.2     |
+| stats/eprewmin          | -3.73    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0105   |
+| misc/clipfrac           | 0.0884   |
+| misc/explained_variance | 0.997    |
+| misc/fps                | 3.97e+03 |
+| misc/nupdates           | 3.75e+03 |
+| misc/policy_entropy     | 2.78     |
+| misc/policy_loss        | 0.218    |
+| misc/serial_timesteps   | 4.69e+05 |
+| misc/time_elapsed       | 1.88e+03 |
+| misc/total_timesteps    | 7.5e+06  |
+| misc/value_loss         | 2.64     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00672 |
+| stats/eprewmean         | -1.18    |
+| stats/eprewmin          | -3.21    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0131   |
+| misc/clipfrac           | 0.0887   |
+| misc/explained_variance | 0.999    |
+| misc/fps                | 3.88e+03 |
+| misc/nupdates           | 3.8e+03  |
+| misc/policy_entropy     | 2.76     |
+| misc/policy_loss        | -0.0045  |
+| misc/serial_timesteps   | 4.75e+05 |
+| misc/time_elapsed       | 1.9e+03  |
+| misc/total_timesteps    | 7.6e+06  |
+| misc/value_loss         | 0.502    |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00684 |
+| stats/eprewmean         | -1.24    |
+| stats/eprewmin          | -3.09    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.039    |
+| misc/clipfrac           | 0.231    |
+| misc/explained_variance | 0.99     |
+| misc/fps                | 3.99e+03 |
+| misc/nupdates           | 3.85e+03 |
+| misc/policy_entropy     | 2.63     |
+| misc/policy_loss        | -0.0219  |
+| misc/serial_timesteps   | 4.81e+05 |
+| misc/time_elapsed       | 1.93e+03 |
+| misc/total_timesteps    | 7.7e+06  |
+| misc/value_loss         | 7.71     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00675 |
+| stats/eprewmean         | -1.17    |
+| stats/eprewmin          | -3.17    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0113   |
+| misc/clipfrac           | 0.0688   |
+| misc/explained_variance | 0.998    |
+| misc/fps                | 3.98e+03 |
+| misc/nupdates           | 3.9e+03  |
+| misc/policy_entropy     | 2.58     |
+| misc/policy_loss        | 0.161    |
+| misc/serial_timesteps   | 4.88e+05 |
+| misc/time_elapsed       | 1.95e+03 |
+| misc/total_timesteps    | 7.8e+06  |
+| misc/value_loss         | 2.18     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.007   |
+| stats/eprewmean         | -1.21    |
+| stats/eprewmin          | -3.52    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0324   |
+| misc/clipfrac           | 0.14     |
+| misc/explained_variance | 0.999    |
+| misc/fps                | 3.74e+03 |
+| misc/nupdates           | 3.95e+03 |
+| misc/policy_entropy     | 2.53     |
+| misc/policy_loss        | 0.0511   |
+| misc/serial_timesteps   | 4.94e+05 |
+| misc/time_elapsed       | 1.98e+03 |
+| misc/total_timesteps    | 7.9e+06  |
+| misc/value_loss         | 0.697    |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00685 |
+| stats/eprewmean         | -1.17    |
+| stats/eprewmin          | -3.18    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0151   |
+| misc/clipfrac           | 0.0971   |
+| misc/explained_variance | 0.979    |
+| misc/fps                | 3.99e+03 |
+| misc/nupdates           | 4e+03    |
+| misc/policy_entropy     | 2.48     |
+| misc/policy_loss        | 0.23     |
+| misc/serial_timesteps   | 5e+05    |
+| misc/time_elapsed       | 2e+03    |
+| misc/total_timesteps    | 8e+06    |
+| misc/value_loss         | 16.3     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00633 |
+| stats/eprewmean         | -1.15    |
+| stats/eprewmin          | -2.99    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0823   |
+| misc/clipfrac           | 0.281    |
+| misc/explained_variance | 0.976    |
+| misc/fps                | 3.9e+03  |
+| misc/nupdates           | 4.05e+03 |
+| misc/policy_entropy     | 2.48     |
+| misc/policy_loss        | 0.738    |
+| misc/serial_timesteps   | 5.06e+05 |
+| misc/time_elapsed       | 2.03e+03 |
+| misc/total_timesteps    | 8.1e+06  |
+| misc/value_loss         | 23.2     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00681 |
+| stats/eprewmean         | -1.17    |
+| stats/eprewmin          | -3.03    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0296   |
+| misc/clipfrac           | 0.152    |
+| misc/explained_variance | 0.999    |
+| misc/fps                | 4.01e+03 |
+| misc/nupdates           | 4.1e+03  |
+| misc/policy_entropy     | 2.43     |
+| misc/policy_loss        | -0.0528  |
+| misc/serial_timesteps   | 5.12e+05 |
+| misc/time_elapsed       | 2.05e+03 |
+| misc/total_timesteps    | 8.2e+06  |
+| misc/value_loss         | 0.801    |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00639 |
+| stats/eprewmean         | -1.14    |
+| stats/eprewmin          | -4.02    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.263    |
+| misc/clipfrac           | 0.545    |
+| misc/explained_variance | 0.989    |
+| misc/fps                | 3.89e+03 |
+| misc/nupdates           | 4.15e+03 |
+| misc/policy_entropy     | 2.38     |
+| misc/policy_loss        | 0.392    |
+| misc/serial_timesteps   | 5.19e+05 |
+| misc/time_elapsed       | 2.08e+03 |
+| misc/total_timesteps    | 8.3e+06  |
+| misc/value_loss         | 8.9      |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00682 |
+| stats/eprewmean         | -1.2     |
+| stats/eprewmin          | -2.96    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0451   |
+| misc/clipfrac           | 0.257    |
+| misc/explained_variance | 0.983    |
+| misc/fps                | 3.95e+03 |
+| misc/nupdates           | 4.2e+03  |
+| misc/policy_entropy     | 2.31     |
+| misc/policy_loss        | 0.496    |
+| misc/serial_timesteps   | 5.25e+05 |
+| misc/time_elapsed       | 2.1e+03  |
+| misc/total_timesteps    | 8.4e+06  |
+| misc/value_loss         | 19.7     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.0065  |
+| stats/eprewmean         | -1.16    |
+| stats/eprewmin          | -3.69    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0418   |
+| misc/clipfrac           | 0.251    |
+| misc/explained_variance | 0.999    |
+| misc/fps                | 3.98e+03 |
+| misc/nupdates           | 4.25e+03 |
+| misc/policy_entropy     | 2.17     |
+| misc/policy_loss        | 0.173    |
+| misc/serial_timesteps   | 5.31e+05 |
+| misc/time_elapsed       | 2.13e+03 |
+| misc/total_timesteps    | 8.5e+06  |
+| misc/value_loss         | 1.77     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00612 |
+| stats/eprewmean         | -1.19    |
+| stats/eprewmin          | -3.66    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0465   |
+| misc/clipfrac           | 0.234    |
+| misc/explained_variance | 0.998    |
+| misc/fps                | 3.9e+03  |
+| misc/nupdates           | 4.3e+03  |
+| misc/policy_entropy     | 2.2      |
+| misc/policy_loss        | 0.109    |
+| misc/serial_timesteps   | 5.38e+05 |
+| misc/time_elapsed       | 2.15e+03 |
+| misc/total_timesteps    | 8.6e+06  |
+| misc/value_loss         | 2.34     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.0064  |
+| stats/eprewmean         | -1.18    |
+| stats/eprewmin          | -4.05    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0382   |
+| misc/clipfrac           | 0.237    |
+| misc/explained_variance | 0.989    |
+| misc/fps                | 3.89e+03 |
+| misc/nupdates           | 4.35e+03 |
+| misc/policy_entropy     | 2.18     |
+| misc/policy_loss        | 0.315    |
+| misc/serial_timesteps   | 5.44e+05 |
+| misc/time_elapsed       | 2.18e+03 |
+| misc/total_timesteps    | 8.7e+06  |
+| misc/value_loss         | 10.1     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00606 |
+| stats/eprewmean         | -1.16    |
+| stats/eprewmin          | -3.97    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.352    |
+| misc/clipfrac           | 0.298    |
+| misc/explained_variance | 0.982    |
+| misc/fps                | 4.08e+03 |
+| misc/nupdates           | 4.4e+03  |
+| misc/policy_entropy     | 2.16     |
+| misc/policy_loss        | 0.942    |
+| misc/serial_timesteps   | 5.5e+05  |
+| misc/time_elapsed       | 2.2e+03  |
+| misc/total_timesteps    | 8.8e+06  |
+| misc/value_loss         | 24.6     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00625 |
+| stats/eprewmean         | -1.18    |
+| stats/eprewmin          | -3.06    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0375   |
+| misc/clipfrac           | 0.199    |
+| misc/explained_variance | 0.999    |
+| misc/fps                | 4.04e+03 |
+| misc/nupdates           | 4.45e+03 |
+| misc/policy_entropy     | 2.12     |
+| misc/policy_loss        | 0.0938   |
+| misc/serial_timesteps   | 5.56e+05 |
+| misc/time_elapsed       | 2.23e+03 |
+| misc/total_timesteps    | 8.9e+06  |
+| misc/value_loss         | 1.45     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00643 |
+| stats/eprewmean         | -1.25    |
+| stats/eprewmin          | -3.19    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.027    |
+| misc/clipfrac           | 0.195    |
+| misc/explained_variance | 0.992    |
+| misc/fps                | 3.97e+03 |
+| misc/nupdates           | 4.5e+03  |
+| misc/policy_entropy     | 2.25     |
+| misc/policy_loss        | 0.474    |
+| misc/serial_timesteps   | 5.62e+05 |
+| misc/time_elapsed       | 2.25e+03 |
+| misc/total_timesteps    | 9e+06    |
+| misc/value_loss         | 14.3     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00673 |
+| stats/eprewmean         | -1.28    |
+| stats/eprewmin          | -4.45    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0395   |
+| misc/clipfrac           | 0.251    |
+| misc/explained_variance | 0.998    |
+| misc/fps                | 3.94e+03 |
+| misc/nupdates           | 4.55e+03 |
+| misc/policy_entropy     | 2.17     |
+| misc/policy_loss        | 0.108    |
+| misc/serial_timesteps   | 5.69e+05 |
+| misc/time_elapsed       | 2.28e+03 |
+| misc/total_timesteps    | 9.1e+06  |
+| misc/value_loss         | 2.2      |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.0058  |
+| stats/eprewmean         | -1.23    |
+| stats/eprewmin          | -3.61    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.101    |
+| misc/clipfrac           | 0.37     |
+| misc/explained_variance | 0.984    |
+| misc/fps                | 3.98e+03 |
+| misc/nupdates           | 4.6e+03  |
+| misc/policy_entropy     | 2.13     |
+| misc/policy_loss        | -0.615   |
+| misc/serial_timesteps   | 5.75e+05 |
+| misc/time_elapsed       | 2.3e+03  |
+| misc/total_timesteps    | 9.2e+06  |
+| misc/value_loss         | 13.1     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00607 |
+| stats/eprewmean         | -1.2     |
+| stats/eprewmin          | -3.65    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0803   |
+| misc/clipfrac           | 0.31     |
+| misc/explained_variance | 0.983    |
+| misc/fps                | 4.04e+03 |
+| misc/nupdates           | 4.65e+03 |
+| misc/policy_entropy     | 2.1      |
+| misc/policy_loss        | 0.464    |
+| misc/serial_timesteps   | 5.81e+05 |
+| misc/time_elapsed       | 2.33e+03 |
+| misc/total_timesteps    | 9.3e+06  |
+| misc/value_loss         | 15.7     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00543 |
+| stats/eprewmean         | -1.19    |
+| stats/eprewmin          | -3.73    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.0799   |
+| misc/clipfrac           | 0.286    |
+| misc/explained_variance | 0.998    |
+| misc/fps                | 3.95e+03 |
+| misc/nupdates           | 4.7e+03  |
+| misc/policy_entropy     | 1.95     |
+| misc/policy_loss        | 0.134    |
+| misc/serial_timesteps   | 5.88e+05 |
+| misc/time_elapsed       | 2.35e+03 |
+| misc/total_timesteps    | 9.4e+06  |
+| misc/value_loss         | 1.61     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00565 |
+| stats/eprewmean         | -1.11    |
+| stats/eprewmin          | -2.98    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.037    |
+| misc/clipfrac           | 0.282    |
+| misc/explained_variance | 0.993    |
+| misc/fps                | 3.88e+03 |
+| misc/nupdates           | 4.75e+03 |
+| misc/policy_entropy     | 1.84     |
+| misc/policy_loss        | -0.199   |
+| misc/serial_timesteps   | 5.94e+05 |
+| misc/time_elapsed       | 2.38e+03 |
+| misc/total_timesteps    | 9.5e+06  |
+| misc/value_loss         | 3.85     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00549 |
+| stats/eprewmean         | -1.21    |
+| stats/eprewmin          | -2.93    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.631    |
+| misc/clipfrac           | 0.335    |
+| misc/explained_variance | 0.986    |
+| misc/fps                | 4.01e+03 |
+| misc/nupdates           | 4.8e+03  |
+| misc/policy_entropy     | 1.91     |
+| misc/policy_loss        | 0.651    |
+| misc/serial_timesteps   | 6e+05    |
+| misc/time_elapsed       | 2.4e+03  |
+| misc/total_timesteps    | 9.6e+06  |
+| misc/value_loss         | 17       |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00518 |
+| stats/eprewmean         | -1.18    |
+| stats/eprewmin          | -3.11    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.438    |
+| misc/clipfrac           | 0.429    |
+| misc/explained_variance | 0.987    |
+| misc/fps                | 4.1e+03  |
+| misc/nupdates           | 4.85e+03 |
+| misc/policy_entropy     | 1.83     |
+| misc/policy_loss        | 0.228    |
+| misc/serial_timesteps   | 6.06e+05 |
+| misc/time_elapsed       | 2.43e+03 |
+| misc/total_timesteps    | 9.7e+06  |
+| misc/value_loss         | 18.1     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00542 |
+| stats/eprewmean         | -1.2     |
+| stats/eprewmin          | -3.08    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.479    |
+| misc/clipfrac           | 0.488    |
+| misc/explained_variance | 0.971    |
+| misc/fps                | 3.99e+03 |
+| misc/nupdates           | 4.9e+03  |
+| misc/policy_entropy     | 1.74     |
+| misc/policy_loss        | 0.542    |
+| misc/serial_timesteps   | 6.12e+05 |
+| misc/time_elapsed       | 2.45e+03 |
+| misc/total_timesteps    | 9.8e+06  |
+| misc/value_loss         | 25.5     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00526 |
+| stats/eprewmean         | -1.14    |
+| stats/eprewmin          | -3.26    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 1.38     |
+| misc/clipfrac           | 0.468    |
+| misc/explained_variance | 0.996    |
+| misc/fps                | 4.1e+03  |
+| misc/nupdates           | 4.95e+03 |
+| misc/policy_entropy     | 1.74     |
+| misc/policy_loss        | -0.242   |
+| misc/serial_timesteps   | 6.19e+05 |
+| misc/time_elapsed       | 2.48e+03 |
+| misc/total_timesteps    | 9.9e+06  |
+| misc/value_loss         | 5.18     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00525 |
+| stats/eprewmean         | -1.2     |
+| stats/eprewmin          | -3.64    |
+--------------------------------------
+Stepping environment...
+Done.
+--------------------------------------
+| misc/approxkl           | 0.192    |
+| misc/clipfrac           | 0.419    |
+| misc/explained_variance | 0.991    |
+| misc/fps                | 3.98e+03 |
+| misc/nupdates           | 5e+03    |
+| misc/policy_entropy     | 1.69     |
+| misc/policy_loss        | 0.379    |
+| misc/serial_timesteps   | 6.25e+05 |
+| misc/time_elapsed       | 2.5e+03  |
+| misc/total_timesteps    | 1e+07    |
+| misc/value_loss         | 9.84     |
+| stats/eplenmean         | 125      |
+| stats/eprewmax          | -0.00436 |
+| stats/eprewmean         | -1.19    |
+| stats/eprewmin          | -3.13    |
+--------------------------------------

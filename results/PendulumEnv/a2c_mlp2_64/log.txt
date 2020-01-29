@@ -1,0 +1,1314 @@
+Logging to C:\Users\mikha\PycharmProjects\GymExperiments\log\PendulumEnv\a2c_mlp2_64\
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -4.1     |
+| eprewmean          | -6.09    |
+| eprewmin           | -9.23    |
+| explained_variance | -0.0044  |
+| fps                | 5.46e+03 |
+| nupdates           | 1        |
+| policy_entropy     | 1.42     |
+| policy_loss        | 0.11     |
+| total_timesteps    | 2e+03    |
+| value_loss         | 1.61     |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -2.98    |
+| eprewmean          | -5.94    |
+| eprewmin           | -9.46    |
+| explained_variance | 0.0244   |
+| fps                | 6.6e+03  |
+| nupdates           | 50       |
+| policy_entropy     | 1.42     |
+| policy_loss        | -0.225   |
+| total_timesteps    | 1e+05    |
+| value_loss         | 0.601    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -3.02    |
+| eprewmean          | -5.88    |
+| eprewmin           | -9.56    |
+| explained_variance | 0.0199   |
+| fps                | 6.62e+03 |
+| nupdates           | 100      |
+| policy_entropy     | 1.42     |
+| policy_loss        | 0.186    |
+| total_timesteps    | 2e+05    |
+| value_loss         | 0.649    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -3.01    |
+| eprewmean          | -5.88    |
+| eprewmin           | -9.26    |
+| explained_variance | 0.0259   |
+| fps                | 6.63e+03 |
+| nupdates           | 150      |
+| policy_entropy     | 1.42     |
+| policy_loss        | 0.154    |
+| total_timesteps    | 3e+05    |
+| value_loss         | 0.499    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -3.03    |
+| eprewmean          | -5.72    |
+| eprewmin           | -9.51    |
+| explained_variance | 0.0295   |
+| fps                | 6.62e+03 |
+| nupdates           | 200      |
+| policy_entropy     | 1.42     |
+| policy_loss        | 0.0895   |
+| total_timesteps    | 4e+05    |
+| value_loss         | 0.486    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -2.99    |
+| eprewmean          | -5.56    |
+| eprewmin           | -9.2     |
+| explained_variance | 0.0302   |
+| fps                | 6.61e+03 |
+| nupdates           | 250      |
+| policy_entropy     | 1.41     |
+| policy_loss        | 0.0905   |
+| total_timesteps    | 5e+05    |
+| value_loss         | 0.47     |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -2.1     |
+| eprewmean          | -5.54    |
+| eprewmin           | -9.08    |
+| explained_variance | 0.0348   |
+| fps                | 6.6e+03  |
+| nupdates           | 300      |
+| policy_entropy     | 1.4      |
+| policy_loss        | 0.304    |
+| total_timesteps    | 6e+05    |
+| value_loss         | 0.416    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -2.02    |
+| eprewmean          | -5.33    |
+| eprewmin           | -9.21    |
+| explained_variance | 0.0324   |
+| fps                | 6.6e+03  |
+| nupdates           | 350      |
+| policy_entropy     | 1.39     |
+| policy_loss        | 0.0012   |
+| total_timesteps    | 7e+05    |
+| value_loss         | 0.351    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -2.09    |
+| eprewmean          | -5.22    |
+| eprewmin           | -8.65    |
+| explained_variance | 0.0335   |
+| fps                | 6.6e+03  |
+| nupdates           | 400      |
+| policy_entropy     | 1.39     |
+| policy_loss        | 0.576    |
+| total_timesteps    | 8e+05    |
+| value_loss         | 0.553    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -2.12    |
+| eprewmean          | -5.25    |
+| eprewmin           | -8.95    |
+| explained_variance | 0.0373   |
+| fps                | 6.59e+03 |
+| nupdates           | 450      |
+| policy_entropy     | 1.38     |
+| policy_loss        | -0.263   |
+| total_timesteps    | 9e+05    |
+| value_loss         | 0.44     |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -1.84    |
+| eprewmean          | -5.11    |
+| eprewmin           | -8.21    |
+| explained_variance | 0.0398   |
+| fps                | 6.6e+03  |
+| nupdates           | 500      |
+| policy_entropy     | 1.37     |
+| policy_loss        | 0.263    |
+| total_timesteps    | 1e+06    |
+| value_loss         | 0.473    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -2.02    |
+| eprewmean          | -5.12    |
+| eprewmin           | -9.16    |
+| explained_variance | 0.0394   |
+| fps                | 6.52e+03 |
+| nupdates           | 550      |
+| policy_entropy     | 1.36     |
+| policy_loss        | -0.0979  |
+| total_timesteps    | 1.1e+06  |
+| value_loss         | 0.381    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -2.13    |
+| eprewmean          | -5.13    |
+| eprewmin           | -8.51    |
+| explained_variance | 0.0432   |
+| fps                | 6.53e+03 |
+| nupdates           | 600      |
+| policy_entropy     | 1.36     |
+| policy_loss        | 0.191    |
+| total_timesteps    | 1.2e+06  |
+| value_loss         | 0.381    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -2.16    |
+| eprewmean          | -5.03    |
+| eprewmin           | -8.27    |
+| explained_variance | 0.0448   |
+| fps                | 6.55e+03 |
+| nupdates           | 650      |
+| policy_entropy     | 1.35     |
+| policy_loss        | 0.0513   |
+| total_timesteps    | 1.3e+06  |
+| value_loss         | 0.294    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -1.2     |
+| eprewmean          | -5.01    |
+| eprewmin           | -8.5     |
+| explained_variance | 0.038    |
+| fps                | 6.55e+03 |
+| nupdates           | 700      |
+| policy_entropy     | 1.35     |
+| policy_loss        | 0.654    |
+| total_timesteps    | 1.4e+06  |
+| value_loss         | 0.617    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -1.5     |
+| eprewmean          | -5.16    |
+| eprewmin           | -8.28    |
+| explained_variance | 0.0441   |
+| fps                | 6.56e+03 |
+| nupdates           | 750      |
+| policy_entropy     | 1.34     |
+| policy_loss        | -0.2     |
+| total_timesteps    | 1.5e+06  |
+| value_loss         | 0.268    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -1.08    |
+| eprewmean          | -4.92    |
+| eprewmin           | -8.34    |
+| explained_variance | 0.0428   |
+| fps                | 6.56e+03 |
+| nupdates           | 800      |
+| policy_entropy     | 1.33     |
+| policy_loss        | 0.184    |
+| total_timesteps    | 1.6e+06  |
+| value_loss         | 0.347    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -2.12    |
+| eprewmean          | -5.02    |
+| eprewmin           | -7.93    |
+| explained_variance | 0.0436   |
+| fps                | 6.57e+03 |
+| nupdates           | 850      |
+| policy_entropy     | 1.33     |
+| policy_loss        | 0.114    |
+| total_timesteps    | 1.7e+06  |
+| value_loss         | 0.35     |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -1.22    |
+| eprewmean          | -5.03    |
+| eprewmin           | -8.23    |
+| explained_variance | 0.0423   |
+| fps                | 6.57e+03 |
+| nupdates           | 900      |
+| policy_entropy     | 1.32     |
+| policy_loss        | 0.191    |
+| total_timesteps    | 1.8e+06  |
+| value_loss         | 0.326    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -2.06    |
+| eprewmean          | -5.13    |
+| eprewmin           | -7.92    |
+| explained_variance | 0.0423   |
+| fps                | 6.58e+03 |
+| nupdates           | 950      |
+| policy_entropy     | 1.31     |
+| policy_loss        | 0.475    |
+| total_timesteps    | 1.9e+06  |
+| value_loss         | 0.458    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.0914  |
+| eprewmean          | -4.93    |
+| eprewmin           | -8.08    |
+| explained_variance | 0.0432   |
+| fps                | 6.56e+03 |
+| nupdates           | 1e+03    |
+| policy_entropy     | 1.3      |
+| policy_loss        | -0.315   |
+| total_timesteps    | 2e+06    |
+| value_loss         | 0.353    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -2.13    |
+| eprewmean          | -4.95    |
+| eprewmin           | -7.94    |
+| explained_variance | 0.0417   |
+| fps                | 6.54e+03 |
+| nupdates           | 1.05e+03 |
+| policy_entropy     | 1.31     |
+| policy_loss        | -0.24    |
+| total_timesteps    | 2.1e+06  |
+| value_loss         | 0.43     |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -1.14    |
+| eprewmean          | -4.92    |
+| eprewmin           | -7.9     |
+| explained_variance | 0.0447   |
+| fps                | 6.54e+03 |
+| nupdates           | 1.1e+03  |
+| policy_entropy     | 1.3      |
+| policy_loss        | 0.188    |
+| total_timesteps    | 2.2e+06  |
+| value_loss         | 0.288    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -1.15    |
+| eprewmean          | -4.91    |
+| eprewmin           | -8.93    |
+| explained_variance | 0.0459   |
+| fps                | 6.54e+03 |
+| nupdates           | 1.15e+03 |
+| policy_entropy     | 1.31     |
+| policy_loss        | 0.414    |
+| total_timesteps    | 2.3e+06  |
+| value_loss         | 0.342    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.187   |
+| eprewmean          | -4.81    |
+| eprewmin           | -8.23    |
+| explained_variance | 0.0415   |
+| fps                | 6.54e+03 |
+| nupdates           | 1.2e+03  |
+| policy_entropy     | 1.31     |
+| policy_loss        | 0.201    |
+| total_timesteps    | 2.4e+06  |
+| value_loss         | 0.353    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.879   |
+| eprewmean          | -4.82    |
+| eprewmin           | -7.99    |
+| explained_variance | 0.0447   |
+| fps                | 6.54e+03 |
+| nupdates           | 1.25e+03 |
+| policy_entropy     | 1.29     |
+| policy_loss        | 0.0979   |
+| total_timesteps    | 2.5e+06  |
+| value_loss         | 0.304    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.279   |
+| eprewmean          | -4.77    |
+| eprewmin           | -8.17    |
+| explained_variance | 0.0442   |
+| fps                | 6.55e+03 |
+| nupdates           | 1.3e+03  |
+| policy_entropy     | 1.28     |
+| policy_loss        | -0.132   |
+| total_timesteps    | 2.6e+06  |
+| value_loss         | 0.234    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.0559  |
+| eprewmean          | -4.75    |
+| eprewmin           | -7.93    |
+| explained_variance | 0.0463   |
+| fps                | 6.55e+03 |
+| nupdates           | 1.35e+03 |
+| policy_entropy     | 1.28     |
+| policy_loss        | 0.19     |
+| total_timesteps    | 2.7e+06  |
+| value_loss         | 0.27     |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -1.84    |
+| eprewmean          | -4.71    |
+| eprewmin           | -7.83    |
+| explained_variance | 0.0444   |
+| fps                | 6.55e+03 |
+| nupdates           | 1.4e+03  |
+| policy_entropy     | 1.28     |
+| policy_loss        | -0.186   |
+| total_timesteps    | 2.8e+06  |
+| value_loss         | 0.305    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.0288  |
+| eprewmean          | -4.65    |
+| eprewmin           | -7.74    |
+| explained_variance | 0.047    |
+| fps                | 6.55e+03 |
+| nupdates           | 1.45e+03 |
+| policy_entropy     | 1.27     |
+| policy_loss        | -0.0892  |
+| total_timesteps    | 2.9e+06  |
+| value_loss         | 0.209    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.0197  |
+| eprewmean          | -4.5     |
+| eprewmin           | -7.93    |
+| explained_variance | 0.043    |
+| fps                | 6.56e+03 |
+| nupdates           | 1.5e+03  |
+| policy_entropy     | 1.27     |
+| policy_loss        | -0.19    |
+| total_timesteps    | 3e+06    |
+| value_loss         | 0.301    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -1.11    |
+| eprewmean          | -4.56    |
+| eprewmin           | -7.99    |
+| explained_variance | 0.0433   |
+| fps                | 6.53e+03 |
+| nupdates           | 1.55e+03 |
+| policy_entropy     | 1.25     |
+| policy_loss        | 0.286    |
+| total_timesteps    | 3.1e+06  |
+| value_loss         | 0.304    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.0255  |
+| eprewmean          | -4.46    |
+| eprewmin           | -8.14    |
+| explained_variance | 0.0457   |
+| fps                | 6.54e+03 |
+| nupdates           | 1.6e+03  |
+| policy_entropy     | 1.25     |
+| policy_loss        | 0.236    |
+| total_timesteps    | 3.2e+06  |
+| value_loss         | 0.268    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00967 |
+| eprewmean          | -4.46    |
+| eprewmin           | -7.81    |
+| explained_variance | 0.0444   |
+| fps                | 6.54e+03 |
+| nupdates           | 1.65e+03 |
+| policy_entropy     | 1.25     |
+| policy_loss        | -0.121   |
+| total_timesteps    | 3.3e+06  |
+| value_loss         | 0.191    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.0128  |
+| eprewmean          | -4.28    |
+| eprewmin           | -7.76    |
+| explained_variance | 0.049    |
+| fps                | 6.54e+03 |
+| nupdates           | 1.7e+03  |
+| policy_entropy     | 1.26     |
+| policy_loss        | 0.0724   |
+| total_timesteps    | 3.4e+06  |
+| value_loss         | 0.174    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.0124  |
+| eprewmean          | -4.08    |
+| eprewmin           | -7.74    |
+| explained_variance | 0.0454   |
+| fps                | 6.55e+03 |
+| nupdates           | 1.75e+03 |
+| policy_entropy     | 1.26     |
+| policy_loss        | -0.242   |
+| total_timesteps    | 3.5e+06  |
+| value_loss         | 0.103    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.0127  |
+| eprewmean          | -4.21    |
+| eprewmin           | -7.72    |
+| explained_variance | 0.0439   |
+| fps                | 6.55e+03 |
+| nupdates           | 1.8e+03  |
+| policy_entropy     | 1.25     |
+| policy_loss        | -0.11    |
+| total_timesteps    | 3.6e+06  |
+| value_loss         | 0.0864   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.0102  |
+| eprewmean          | -4.04    |
+| eprewmin           | -7.72    |
+| explained_variance | 0.0434   |
+| fps                | 6.56e+03 |
+| nupdates           | 1.85e+03 |
+| policy_entropy     | 1.25     |
+| policy_loss        | -0.351   |
+| total_timesteps    | 3.7e+06  |
+| value_loss         | 0.196    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.0119  |
+| eprewmean          | -3.72    |
+| eprewmin           | -7.72    |
+| explained_variance | 0.0445   |
+| fps                | 6.56e+03 |
+| nupdates           | 1.9e+03  |
+| policy_entropy     | 1.25     |
+| policy_loss        | -0.139   |
+| total_timesteps    | 3.8e+06  |
+| value_loss         | 0.105    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00918 |
+| eprewmean          | -3.65    |
+| eprewmin           | -7.85    |
+| explained_variance | 0.0446   |
+| fps                | 6.55e+03 |
+| nupdates           | 1.95e+03 |
+| policy_entropy     | 1.24     |
+| policy_loss        | 0.0267   |
+| total_timesteps    | 3.9e+06  |
+| value_loss         | 0.07     |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00852 |
+| eprewmean          | -3.47    |
+| eprewmin           | -7.51    |
+| explained_variance | 0.0463   |
+| fps                | 6.55e+03 |
+| nupdates           | 2e+03    |
+| policy_entropy     | 1.24     |
+| policy_loss        | 0.0639   |
+| total_timesteps    | 4e+06    |
+| value_loss         | 0.0866   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00726 |
+| eprewmean          | -3.28    |
+| eprewmin           | -7.66    |
+| explained_variance | 0.0475   |
+| fps                | 6.56e+03 |
+| nupdates           | 2.05e+03 |
+| policy_entropy     | 1.23     |
+| policy_loss        | -0.198   |
+| total_timesteps    | 4.1e+06  |
+| value_loss         | 0.0792   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.006   |
+| eprewmean          | -3.14    |
+| eprewmin           | -7.26    |
+| explained_variance | 0.0444   |
+| fps                | 6.56e+03 |
+| nupdates           | 2.1e+03  |
+| policy_entropy     | 1.23     |
+| policy_loss        | 0.0214   |
+| total_timesteps    | 4.2e+06  |
+| value_loss         | 0.0341   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00678 |
+| eprewmean          | -3.17    |
+| eprewmin           | -7.53    |
+| explained_variance | 0.0464   |
+| fps                | 6.56e+03 |
+| nupdates           | 2.15e+03 |
+| policy_entropy     | 1.22     |
+| policy_loss        | 0.201    |
+| total_timesteps    | 4.3e+06  |
+| value_loss         | 0.0665   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00768 |
+| eprewmean          | -2.75    |
+| eprewmin           | -7.58    |
+| explained_variance | 0.0478   |
+| fps                | 6.56e+03 |
+| nupdates           | 2.2e+03  |
+| policy_entropy     | 1.21     |
+| policy_loss        | 0.0329   |
+| total_timesteps    | 4.4e+06  |
+| value_loss         | 0.0221   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00652 |
+| eprewmean          | -2.64    |
+| eprewmin           | -7.05    |
+| explained_variance | 0.0473   |
+| fps                | 6.56e+03 |
+| nupdates           | 2.25e+03 |
+| policy_entropy     | 1.21     |
+| policy_loss        | -0.197   |
+| total_timesteps    | 4.5e+06  |
+| value_loss         | 0.0613   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00562 |
+| eprewmean          | -2.56    |
+| eprewmin           | -6.87    |
+| explained_variance | 0.0485   |
+| fps                | 6.57e+03 |
+| nupdates           | 2.3e+03  |
+| policy_entropy     | 1.2      |
+| policy_loss        | 0.189    |
+| total_timesteps    | 4.6e+06  |
+| value_loss         | 0.0484   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00649 |
+| eprewmean          | -2.45    |
+| eprewmin           | -7.12    |
+| explained_variance | 0.0482   |
+| fps                | 6.57e+03 |
+| nupdates           | 2.35e+03 |
+| policy_entropy     | 1.19     |
+| policy_loss        | 0.318    |
+| total_timesteps    | 4.7e+06  |
+| value_loss         | 0.0866   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00464 |
+| eprewmean          | -2.28    |
+| eprewmin           | -6.88    |
+| explained_variance | 0.0489   |
+| fps                | 6.57e+03 |
+| nupdates           | 2.4e+03  |
+| policy_entropy     | 1.19     |
+| policy_loss        | 0.164    |
+| total_timesteps    | 4.8e+06  |
+| value_loss         | 0.0333   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00449 |
+| eprewmean          | -2.16    |
+| eprewmin           | -6.26    |
+| explained_variance | 0.0503   |
+| fps                | 6.57e+03 |
+| nupdates           | 2.45e+03 |
+| policy_entropy     | 1.18     |
+| policy_loss        | -0.0877  |
+| total_timesteps    | 4.9e+06  |
+| value_loss         | 0.0354   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00648 |
+| eprewmean          | -1.96    |
+| eprewmin           | -6.11    |
+| explained_variance | 0.055    |
+| fps                | 6.57e+03 |
+| nupdates           | 2.5e+03  |
+| policy_entropy     | 1.17     |
+| policy_loss        | 0.00144  |
+| total_timesteps    | 5e+06    |
+| value_loss         | 0.0109   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00485 |
+| eprewmean          | -1.83    |
+| eprewmin           | -5.32    |
+| explained_variance | 0.0532   |
+| fps                | 6.57e+03 |
+| nupdates           | 2.55e+03 |
+| policy_entropy     | 1.17     |
+| policy_loss        | 0.0146   |
+| total_timesteps    | 5.1e+06  |
+| value_loss         | 0.0193   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00473 |
+| eprewmean          | -1.81    |
+| eprewmin           | -5.12    |
+| explained_variance | 0.0575   |
+| fps                | 6.56e+03 |
+| nupdates           | 2.6e+03  |
+| policy_entropy     | 1.15     |
+| policy_loss        | 0.259    |
+| total_timesteps    | 5.2e+06  |
+| value_loss         | 0.0699   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00627 |
+| eprewmean          | -1.78    |
+| eprewmin           | -5.46    |
+| explained_variance | 0.0547   |
+| fps                | 6.56e+03 |
+| nupdates           | 2.65e+03 |
+| policy_entropy     | 1.14     |
+| policy_loss        | 0.09     |
+| total_timesteps    | 5.3e+06  |
+| value_loss         | 0.0226   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00538 |
+| eprewmean          | -1.71    |
+| eprewmin           | -4.79    |
+| explained_variance | 0.0565   |
+| fps                | 6.56e+03 |
+| nupdates           | 2.7e+03  |
+| policy_entropy     | 1.13     |
+| policy_loss        | -0.0687  |
+| total_timesteps    | 5.4e+06  |
+| value_loss         | 0.0489   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00465 |
+| eprewmean          | -1.59    |
+| eprewmin           | -5.25    |
+| explained_variance | 0.0622   |
+| fps                | 6.56e+03 |
+| nupdates           | 2.75e+03 |
+| policy_entropy     | 1.12     |
+| policy_loss        | -0.0972  |
+| total_timesteps    | 5.5e+06  |
+| value_loss         | 0.0223   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00458 |
+| eprewmean          | -1.67    |
+| eprewmin           | -4.78    |
+| explained_variance | 0.0573   |
+| fps                | 6.56e+03 |
+| nupdates           | 2.8e+03  |
+| policy_entropy     | 1.11     |
+| policy_loss        | -0.211   |
+| total_timesteps    | 5.6e+06  |
+| value_loss         | 0.0864   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00435 |
+| eprewmean          | -1.57    |
+| eprewmin           | -5.24    |
+| explained_variance | 0.0622   |
+| fps                | 6.56e+03 |
+| nupdates           | 2.85e+03 |
+| policy_entropy     | 1.1      |
+| policy_loss        | 0.0286   |
+| total_timesteps    | 5.7e+06  |
+| value_loss         | 0.0131   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00531 |
+| eprewmean          | -1.55    |
+| eprewmin           | -4.57    |
+| explained_variance | 0.0619   |
+| fps                | 6.56e+03 |
+| nupdates           | 2.9e+03  |
+| policy_entropy     | 1.1      |
+| policy_loss        | 0.111    |
+| total_timesteps    | 5.8e+06  |
+| value_loss         | 0.0287   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00415 |
+| eprewmean          | -1.54    |
+| eprewmin           | -4.63    |
+| explained_variance | 0.061    |
+| fps                | 6.56e+03 |
+| nupdates           | 2.95e+03 |
+| policy_entropy     | 1.09     |
+| policy_loss        | 0.111    |
+| total_timesteps    | 5.9e+06  |
+| value_loss         | 0.0188   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00424 |
+| eprewmean          | -1.47    |
+| eprewmin           | -4       |
+| explained_variance | 0.063    |
+| fps                | 6.56e+03 |
+| nupdates           | 3e+03    |
+| policy_entropy     | 1.09     |
+| policy_loss        | -0.0294  |
+| total_timesteps    | 6e+06    |
+| value_loss         | 0.00673  |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.0043  |
+| eprewmean          | -1.5     |
+| eprewmin           | -4.37    |
+| explained_variance | 0.0611   |
+| fps                | 6.56e+03 |
+| nupdates           | 3.05e+03 |
+| policy_entropy     | 1.07     |
+| policy_loss        | 0.0311   |
+| total_timesteps    | 6.1e+06  |
+| value_loss         | 0.0106   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00453 |
+| eprewmean          | -1.53    |
+| eprewmin           | -4.01    |
+| explained_variance | 0.0616   |
+| fps                | 6.56e+03 |
+| nupdates           | 3.1e+03  |
+| policy_entropy     | 1.07     |
+| policy_loss        | 0.16     |
+| total_timesteps    | 6.2e+06  |
+| value_loss         | 0.0366   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00371 |
+| eprewmean          | -1.4     |
+| eprewmin           | -3.93    |
+| explained_variance | 0.0659   |
+| fps                | 6.56e+03 |
+| nupdates           | 3.15e+03 |
+| policy_entropy     | 1.06     |
+| policy_loss        | 0.0625   |
+| total_timesteps    | 6.3e+06  |
+| value_loss         | 0.0193   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00273 |
+| eprewmean          | -1.47    |
+| eprewmin           | -4.55    |
+| explained_variance | 0.0618   |
+| fps                | 6.56e+03 |
+| nupdates           | 3.2e+03  |
+| policy_entropy     | 1.05     |
+| policy_loss        | -0.023   |
+| total_timesteps    | 6.4e+06  |
+| value_loss         | 0.0351   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00428 |
+| eprewmean          | -1.41    |
+| eprewmin           | -3.75    |
+| explained_variance | 0.0635   |
+| fps                | 6.56e+03 |
+| nupdates           | 3.25e+03 |
+| policy_entropy     | 1.04     |
+| policy_loss        | 0.0619   |
+| total_timesteps    | 6.5e+06  |
+| value_loss         | 0.0091   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00434 |
+| eprewmean          | -1.45    |
+| eprewmin           | -5.08    |
+| explained_variance | 0.0632   |
+| fps                | 6.56e+03 |
+| nupdates           | 3.3e+03  |
+| policy_entropy     | 1.03     |
+| policy_loss        | 0.133    |
+| total_timesteps    | 6.6e+06  |
+| value_loss         | 0.025    |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00417 |
+| eprewmean          | -1.4     |
+| eprewmin           | -4.37    |
+| explained_variance | 0.063    |
+| fps                | 6.56e+03 |
+| nupdates           | 3.35e+03 |
+| policy_entropy     | 1.02     |
+| policy_loss        | -0.0554  |
+| total_timesteps    | 6.7e+06  |
+| value_loss         | 0.0288   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00542 |
+| eprewmean          | -1.45    |
+| eprewmin           | -3.98    |
+| explained_variance | 0.066    |
+| fps                | 6.57e+03 |
+| nupdates           | 3.4e+03  |
+| policy_entropy     | 1.02     |
+| policy_loss        | -0.13    |
+| total_timesteps    | 6.8e+06  |
+| value_loss         | 0.0356   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00411 |
+| eprewmean          | -1.39    |
+| eprewmin           | -5.27    |
+| explained_variance | 0.063    |
+| fps                | 6.57e+03 |
+| nupdates           | 3.45e+03 |
+| policy_entropy     | 1.01     |
+| policy_loss        | 0.0676   |
+| total_timesteps    | 6.9e+06  |
+| value_loss         | 0.0305   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00454 |
+| eprewmean          | -1.39    |
+| eprewmin           | -3.73    |
+| explained_variance | 0.0693   |
+| fps                | 6.57e+03 |
+| nupdates           | 3.5e+03  |
+| policy_entropy     | 1.01     |
+| policy_loss        | -0.0393  |
+| total_timesteps    | 7e+06    |
+| value_loss         | 0.0131   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00311 |
+| eprewmean          | -1.4     |
+| eprewmin           | -4.2     |
+| explained_variance | 0.0666   |
+| fps                | 6.57e+03 |
+| nupdates           | 3.55e+03 |
+| policy_entropy     | 0.994    |
+| policy_loss        | -0.0965  |
+| total_timesteps    | 7.1e+06  |
+| value_loss         | 0.0222   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00401 |
+| eprewmean          | -1.36    |
+| eprewmin           | -4.02    |
+| explained_variance | 0.0678   |
+| fps                | 6.56e+03 |
+| nupdates           | 3.6e+03  |
+| policy_entropy     | 0.979    |
+| policy_loss        | -0.0358  |
+| total_timesteps    | 7.2e+06  |
+| value_loss         | 0.0185   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00331 |
+| eprewmean          | -1.32    |
+| eprewmin           | -3.65    |
+| explained_variance | 0.0694   |
+| fps                | 6.56e+03 |
+| nupdates           | 3.65e+03 |
+| policy_entropy     | 0.974    |
+| policy_loss        | 0.0592   |
+| total_timesteps    | 7.3e+06  |
+| value_loss         | 0.02     |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00267 |
+| eprewmean          | -1.32    |
+| eprewmin           | -3.6     |
+| explained_variance | 0.0712   |
+| fps                | 6.56e+03 |
+| nupdates           | 3.7e+03  |
+| policy_entropy     | 0.966    |
+| policy_loss        | 0.0283   |
+| total_timesteps    | 7.4e+06  |
+| value_loss         | 0.0108   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00368 |
+| eprewmean          | -1.36    |
+| eprewmin           | -3.55    |
+| explained_variance | 0.0658   |
+| fps                | 6.56e+03 |
+| nupdates           | 3.75e+03 |
+| policy_entropy     | 0.96     |
+| policy_loss        | -0.0176  |
+| total_timesteps    | 7.5e+06  |
+| value_loss         | 0.0148   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00398 |
+| eprewmean          | -1.35    |
+| eprewmin           | -3.6     |
+| explained_variance | 0.0737   |
+| fps                | 6.56e+03 |
+| nupdates           | 3.8e+03  |
+| policy_entropy     | 0.95     |
+| policy_loss        | -0.197   |
+| total_timesteps    | 7.6e+06  |
+| value_loss         | 0.0611   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.0028  |
+| eprewmean          | -1.33    |
+| eprewmin           | -4.67    |
+| explained_variance | 0.0646   |
+| fps                | 6.56e+03 |
+| nupdates           | 3.85e+03 |
+| policy_entropy     | 0.945    |
+| policy_loss        | 0.0652   |
+| total_timesteps    | 7.7e+06  |
+| value_loss         | 0.0216   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00319 |
+| eprewmean          | -1.32    |
+| eprewmin           | -3.95    |
+| explained_variance | 0.0678   |
+| fps                | 6.56e+03 |
+| nupdates           | 3.9e+03  |
+| policy_entropy     | 0.946    |
+| policy_loss        | 0.00813  |
+| total_timesteps    | 7.8e+06  |
+| value_loss         | 0.0069   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.0027  |
+| eprewmean          | -1.27    |
+| eprewmin           | -3.36    |
+| explained_variance | 0.0722   |
+| fps                | 6.56e+03 |
+| nupdates           | 3.95e+03 |
+| policy_entropy     | 0.943    |
+| policy_loss        | -0.0862  |
+| total_timesteps    | 7.9e+06  |
+| value_loss         | 0.0205   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00306 |
+| eprewmean          | -1.37    |
+| eprewmin           | -3.76    |
+| explained_variance | 0.0647   |
+| fps                | 6.56e+03 |
+| nupdates           | 4e+03    |
+| policy_entropy     | 0.949    |
+| policy_loss        | -0.0282  |
+| total_timesteps    | 8e+06    |
+| value_loss         | 0.0138   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00345 |
+| eprewmean          | -1.3     |
+| eprewmin           | -4.33    |
+| explained_variance | 0.0698   |
+| fps                | 6.56e+03 |
+| nupdates           | 4.05e+03 |
+| policy_entropy     | 0.945    |
+| policy_loss        | -0.0978  |
+| total_timesteps    | 8.1e+06  |
+| value_loss         | 0.0165   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00281 |
+| eprewmean          | -1.36    |
+| eprewmin           | -4.14    |
+| explained_variance | 0.0659   |
+| fps                | 6.56e+03 |
+| nupdates           | 4.1e+03  |
+| policy_entropy     | 0.94     |
+| policy_loss        | -0.0725  |
+| total_timesteps    | 8.2e+06  |
+| value_loss         | 0.0303   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00332 |
+| eprewmean          | -1.33    |
+| eprewmin           | -3.87    |
+| explained_variance | 0.07     |
+| fps                | 6.56e+03 |
+| nupdates           | 4.15e+03 |
+| policy_entropy     | 0.934    |
+| policy_loss        | -0.0644  |
+| total_timesteps    | 8.3e+06  |
+| value_loss         | 0.0168   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00312 |
+| eprewmean          | -1.27    |
+| eprewmin           | -4.2     |
+| explained_variance | 0.0708   |
+| fps                | 6.56e+03 |
+| nupdates           | 4.2e+03  |
+| policy_entropy     | 0.93     |
+| policy_loss        | -0.0244  |
+| total_timesteps    | 8.4e+06  |
+| value_loss         | 0.00949  |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00345 |
+| eprewmean          | -1.27    |
+| eprewmin           | -3.64    |
+| explained_variance | 0.0707   |
+| fps                | 6.56e+03 |
+| nupdates           | 4.25e+03 |
+| policy_entropy     | 0.927    |
+| policy_loss        | 0.0839   |
+| total_timesteps    | 8.5e+06  |
+| value_loss         | 0.0169   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.0033  |
+| eprewmean          | -1.32    |
+| eprewmin           | -3.75    |
+| explained_variance | 0.0658   |
+| fps                | 6.56e+03 |
+| nupdates           | 4.3e+03  |
+| policy_entropy     | 0.917    |
+| policy_loss        | 0.062    |
+| total_timesteps    | 8.6e+06  |
+| value_loss         | 0.0112   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00282 |
+| eprewmean          | -1.3     |
+| eprewmin           | -3.66    |
+| explained_variance | 0.072    |
+| fps                | 6.56e+03 |
+| nupdates           | 4.35e+03 |
+| policy_entropy     | 0.913    |
+| policy_loss        | 0.00912  |
+| total_timesteps    | 8.7e+06  |
+| value_loss         | 0.00562  |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00222 |
+| eprewmean          | -1.3     |
+| eprewmin           | -3.69    |
+| explained_variance | 0.0657   |
+| fps                | 6.56e+03 |
+| nupdates           | 4.4e+03  |
+| policy_entropy     | 0.911    |
+| policy_loss        | -0.114   |
+| total_timesteps    | 8.8e+06  |
+| value_loss         | 0.0609   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00322 |
+| eprewmean          | -1.28    |
+| eprewmin           | -3.69    |
+| explained_variance | 0.0699   |
+| fps                | 6.56e+03 |
+| nupdates           | 4.45e+03 |
+| policy_entropy     | 0.907    |
+| policy_loss        | 0.0594   |
+| total_timesteps    | 8.9e+06  |
+| value_loss         | 0.0107   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00131 |
+| eprewmean          | -1.35    |
+| eprewmin           | -3.68    |
+| explained_variance | 0.0659   |
+| fps                | 6.57e+03 |
+| nupdates           | 4.5e+03  |
+| policy_entropy     | 0.897    |
+| policy_loss        | -0.0858  |
+| total_timesteps    | 9e+06    |
+| value_loss         | 0.0204   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00271 |
+| eprewmean          | -1.33    |
+| eprewmin           | -4.15    |
+| explained_variance | 0.0649   |
+| fps                | 6.56e+03 |
+| nupdates           | 4.55e+03 |
+| policy_entropy     | 0.894    |
+| policy_loss        | 0.0346   |
+| total_timesteps    | 9.1e+06  |
+| value_loss         | 0.0248   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00293 |
+| eprewmean          | -1.34    |
+| eprewmin           | -3.57    |
+| explained_variance | 0.0693   |
+| fps                | 6.56e+03 |
+| nupdates           | 4.6e+03  |
+| policy_entropy     | 0.888    |
+| policy_loss        | -0.0687  |
+| total_timesteps    | 9.2e+06  |
+| value_loss         | 0.0187   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00278 |
+| eprewmean          | -1.31    |
+| eprewmin           | -3.72    |
+| explained_variance | 0.0691   |
+| fps                | 6.56e+03 |
+| nupdates           | 4.65e+03 |
+| policy_entropy     | 0.88     |
+| policy_loss        | 0.072    |
+| total_timesteps    | 9.3e+06  |
+| value_loss         | 0.0124   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00214 |
+| eprewmean          | -1.32    |
+| eprewmin           | -3.73    |
+| explained_variance | 0.0672   |
+| fps                | 6.56e+03 |
+| nupdates           | 4.7e+03  |
+| policy_entropy     | 0.87     |
+| policy_loss        | -0.107   |
+| total_timesteps    | 9.4e+06  |
+| value_loss         | 0.0356   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00314 |
+| eprewmean          | -1.27    |
+| eprewmin           | -3.93    |
+| explained_variance | 0.071    |
+| fps                | 6.56e+03 |
+| nupdates           | 4.75e+03 |
+| policy_entropy     | 0.869    |
+| policy_loss        | -0.0342  |
+| total_timesteps    | 9.5e+06  |
+| value_loss         | 0.01     |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.0028  |
+| eprewmean          | -1.34    |
+| eprewmin           | -3.97    |
+| explained_variance | 0.0667   |
+| fps                | 6.56e+03 |
+| nupdates           | 4.8e+03  |
+| policy_entropy     | 0.857    |
+| policy_loss        | 0.0376   |
+| total_timesteps    | 9.6e+06  |
+| value_loss         | 0.00754  |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00367 |
+| eprewmean          | -1.29    |
+| eprewmin           | -3.34    |
+| explained_variance | 0.0699   |
+| fps                | 6.56e+03 |
+| nupdates           | 4.85e+03 |
+| policy_entropy     | 0.852    |
+| policy_loss        | 0.0834   |
+| total_timesteps    | 9.7e+06  |
+| value_loss         | 0.0151   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00205 |
+| eprewmean          | -1.29    |
+| eprewmin           | -3.64    |
+| explained_variance | 0.0705   |
+| fps                | 6.56e+03 |
+| nupdates           | 4.9e+03  |
+| policy_entropy     | 0.851    |
+| policy_loss        | -0.00927 |
+| total_timesteps    | 9.8e+06  |
+| value_loss         | 0.0057   |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.00236 |
+| eprewmean          | -1.27    |
+| eprewmin           | -3.45    |
+| explained_variance | 0.0702   |
+| fps                | 6.56e+03 |
+| nupdates           | 4.95e+03 |
+| policy_entropy     | 0.852    |
+| policy_loss        | -0.00125 |
+| total_timesteps    | 9.9e+06  |
+| value_loss         | 0.00954  |
+---------------------------------
+---------------------------------
+| eplenmean          | 125      |
+| eprewmax           | -0.0027  |
+| eprewmean          | -1.32    |
+| eprewmin           | -3.8     |
+| explained_variance | 0.069    |
+| fps                | 6.56e+03 |
+| nupdates           | 5e+03    |
+| policy_entropy     | 0.849    |
+| policy_loss        | -0.0749  |
+| total_timesteps    | 1e+07    |
+| value_loss         | 0.0227   |
+---------------------------------
