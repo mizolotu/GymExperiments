@@ -340,7 +340,7 @@ class LunarLander(gym.Env, EzPickle):
         else:
             obs = obs_last
 
-        return obs, reward, done, {}
+        return obs, reward, done, {'r': reward, 'l': self.step_count}
 
     def render(self, mode='human'):
         from gym.envs.classic_control import rendering
