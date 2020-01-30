@@ -9,6 +9,8 @@ import gym
 from gym import spaces
 from gym.utils import colorize, seeding, EzPickle
 
+from collections import deque
+
 # This is simple 4-joints walker robot environment.
 #
 # There are two versions:
@@ -109,10 +111,12 @@ class BipedalWalker(gym.Env, EzPickle):
 
     hardcore = False
 
-    def __init__(self):
+    def __init__(self, stack=None):
         EzPickle.__init__(self)
         self.seed()
         self.viewer = None
+
+        self.step_count = 0
 
         self.world = Box2D.b2World()
         self.terrain = None
@@ -136,11 +140,17 @@ class BipedalWalker(gym.Env, EzPickle):
                     categoryBits=0x0001,
                 )
 
-        self.reset()
+        if stack is not None:
+            self.frames = deque(maxlen=stack)
+            high = np.ones((stack, 1)) * np.array([np.inf] * 24)
+        else:
+            self.frames = None
+            high = np.array([np.inf] * 24)
 
-        high = np.array([np.inf] * 24)
         self.action_space = spaces.Box(np.array([-1, -1, -1, -1]), np.array([1, 1, 1, 1]), dtype=np.float32)
         self.observation_space = spaces.Box(-high, high, dtype=np.float32)
+
+        self.reset()
 
     def seed(self, seed=None):
         self.np_random, seed = seeding.np_random(seed)
@@ -442,8 +452,18 @@ class BipedalWalker(gym.Env, EzPickle):
             reward = -100
             done   = True
         if pos[0] > (TERRAIN_LENGTH-TERRAIN_GRASS)*TERRAIN_STEP:
-            done   = True
-        return np.array(state), reward, done, {}
+            done  = True
+
+        obs_last = np.array(state)
+        if self.frames is not None:
+            self.frames.append(obs_last)
+            while len(self.frames) < self.frames.maxlen:
+                self.frames.append(obs_last)
+            obs = np.array([x for x in self.frames])
+        else:
+            obs = obs_last
+
+        return obs, reward, done, {}
 
     def render(self, mode='human'):
         from gym.envs.classic_control import rendering

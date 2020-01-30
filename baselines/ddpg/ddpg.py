@@ -125,7 +125,7 @@ def learn(network, env, total_timesteps,
     epoch_actions = []
     epoch_qs = []
     epoch_episodes = 0
-    for epoch in range(100):
+    for epoch in range(50):
 
         epoch_episode_rewards = []
 

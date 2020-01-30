@@ -42,10 +42,10 @@ def test_alg_on_env(env_class, algorithm, network, ne, ns, tt, ld='log'):
     logdir = '{0}/{1}/{2}_{3}/'.format(ld, env_class.__name__, algorithm['name'], network)
     format_strs = os.getenv('', 'stdout,log,csv').split(',')
     logger.configure(os.path.abspath(logdir), format_strs)
-    if int(tt/(ne*ns*100)) < 1:
+    if int(tt/(ne * ns * 50)) < 1:
         log_interval = 1
     else:
-        log_interval = int(tt / (ne * ns * 100))
+        log_interval = int(tt / (ne * ns * 50))
     algorithm['learn'](env=train_envs, network=network, nsteps=ns, total_timesteps=tt, log_interval=log_interval)
 
 if __name__ == '__main__':
