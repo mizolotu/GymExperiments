@@ -298,6 +298,9 @@ class BipedalWalker(gym.Env, EzPickle):
             self.cloud_poly.append( (poly,x1,x2) )
 
     def reset(self):
+
+        self.step_count = 0
+
         self._destroy()
         self.world.contactListener_bug_workaround = ContactDetector(self)
         self.world.contactListener = self.world.contactListener_bug_workaround
@@ -384,6 +387,9 @@ class BipedalWalker(gym.Env, EzPickle):
         return self.step(np.array([0,0,0,0]))[0]
 
     def step(self, action):
+
+        self.step_count += 1
+
         #self.hull.ApplyForceToCenter((0, 20), True) -- Uncomment this to receive a bit of stability help
         control_speed = False  # Should be easier as well
         if control_speed:
@@ -449,7 +455,7 @@ class BipedalWalker(gym.Env, EzPickle):
 
         done = False
         if self.game_over or pos[0] < 0:
-            reward = -100
+            reward = -100.0
             done   = True
         if pos[0] > (TERRAIN_LENGTH-TERRAIN_GRASS)*TERRAIN_STEP:
             done  = True
@@ -463,7 +469,7 @@ class BipedalWalker(gym.Env, EzPickle):
         else:
             obs = obs_last
 
-        return obs, reward, done, {}
+        return obs, reward, done, {'r': reward, 'l': self.step_count}
 
     def render(self, mode='human'):
         from gym.envs.classic_control import rendering
