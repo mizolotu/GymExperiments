@@ -8,6 +8,8 @@ import gym
 from gym import spaces
 from gym.utils import seeding, EzPickle
 
+from collections import deque
+
 # Rocket trajectory optimization is a classic topic in Optimal Control.
 #
 # According to Pontryagin's maximum principle it's optimal to fire engine full throttle or
@@ -78,10 +80,12 @@ class LunarLander(gym.Env, EzPickle):
 
     continuous = False
 
-    def __init__(self):
+    def __init__(self, stack=None):
         EzPickle.__init__(self)
         self.seed()
         self.viewer = None
+
+        self.step_count = 0
 
         self.world = Box2D.b2World()
         self.moon = None
@@ -91,7 +95,15 @@ class LunarLander(gym.Env, EzPickle):
         self.prev_reward = None
 
         # useful range is -1 .. +1, but spikes can be higher
-        self.observation_space = spaces.Box(-np.inf, np.inf, shape=(8,), dtype=np.float32)
+
+        if stack is not None:
+            self.frames = deque(maxlen=stack)
+            obs_shape = (4,8)
+        else:
+            self.frames = None
+            obs_shape = (8,)
+
+        self.observation_space = spaces.Box(-np.inf, np.inf, shape=obs_shape, dtype=np.float32)
 
         if self.continuous:
             # Action is two floats [main engine, left-right engines].
@@ -120,6 +132,7 @@ class LunarLander(gym.Env, EzPickle):
         self.world.DestroyBody(self.legs[1])
 
     def reset(self):
+        self.step_count = 0
         self._destroy()
         self.world.contactListener_keepref = ContactDetector(self)
         self.world.contactListener = self.world.contactListener_keepref
@@ -236,6 +249,9 @@ class LunarLander(gym.Env, EzPickle):
             self.world.DestroyBody(self.particles.pop(0))
 
     def step(self, action):
+
+        self.step_count += 1
+
         if self.continuous:
             action = np.clip(action, -1, +1).astype(np.float32)
         else:
@@ -314,7 +330,17 @@ class LunarLander(gym.Env, EzPickle):
         if not self.lander.awake:
             done   = True
             reward = +100
-        return np.array(state, dtype=np.float32), reward, done, {}
+
+        obs_last = np.array(state, dtype=np.float32)
+        if self.frames is not None:
+            self.frames.append(obs_last)
+            while len(self.frames) < self.frames.maxlen:
+                self.frames.append(obs_last)
+            obs = np.array([x for x in self.frames])
+        else:
+            obs = obs_last
+
+        return obs, reward, done, {}
 
     def render(self, mode='human'):
         from gym.envs.classic_control import rendering
